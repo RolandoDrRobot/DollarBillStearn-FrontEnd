@@ -6,6 +6,10 @@ import { Provider as AlertProvider } from 'react-alert';
 import alertOptions from './utils/alertOptions';
 import AlertTemplate from 'react-alert-template-basic';
 
+
+
+import Header from './components/Header/index';
+import Navbar from './components/Navbar/index';
 import Home from './views/Home/index';
 import SettingsRoom from './views/SettingsRoom/index';
 import StatsRoom from './views/StatsRoom/index';

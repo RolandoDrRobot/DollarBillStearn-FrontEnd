@@ -1,0 +1,30 @@
+.navbar {
+  width: 100%;
+  max-width: 340px;
+  padding: 20px;
+  background-color: var(--light-green);
+  border-radius: 35px;
+  margin: auto;
+}
+
+.navbar a {
+  color: var(--light-gray);
+  font-size: 12px;
+  margin: 0 auto;
+  transition: all 0.5s;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar a:active,
+.navbar a:focus,
+.navbar a:hover {
+  color: var(--white);
+  filter: drop-shadow(0 5px 20px var(--white));
+}
+
+.navbar img {
+  display: block;
+  width: 35px;
+  margin: 0 auto 5px;
+}
