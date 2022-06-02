@@ -5,7 +5,7 @@ function TradingRoom() {
   return (
     <>
       <div className="view-container">
-        <h1>Hello from Trading Room</h1>
+        <h1>Hello from Trading</h1>
       </div>
     </>
   )

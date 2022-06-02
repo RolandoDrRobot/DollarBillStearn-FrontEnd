@@ -1,19 +1,23 @@
 :root {
+  --main-bg-color: #c8cde0;
+  --white: #fff;
+
   --lighter-gray: #ADCAD9;
-  --light-gray: #7A8F99;
   --main-gray: #3D474C;
   --dark-gray: #475359;
   --light-gray: #879c84;
   --darker-gray: #293033;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 * {
   transition: all 0.25s;
 }
 
 body {
-  color: var(--lighter-gray);
-  background-color: var(--darker-gray);
+  color: var(--dark-gray);
+  background: linear-gradient(140deg, #c8cde0 0%, #e3e6ef 100%);
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   display: flex;
@@ -24,6 +28,7 @@ body {
 
 #content {
   width: 100%;
+  min-width: 320px;
   max-width: 340px;
   height: 66vh;
   margin: 15px 0;
