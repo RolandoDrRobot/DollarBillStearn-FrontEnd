@@ -1,8 +1,5 @@
 import React from 'react';
 import Wallet from '../../components/Wallet/index';
-import bitcoinIcon from '../../assets/img/bitcoin.png';
-import ethereumIcon from '../../assets/img/ethereum.png';
-import xrpIcon from '../../assets/img/xrp.png';
 import './main.css';
 
 
@@ -20,9 +17,9 @@ function Vault() {
 
           <div className="" id="trade-box">
             <div className="prices d-flex justify-content-center mb-3">
-              <label><img className="coin" src={bitcoinIcon} /> $<span className="js-btc-quote"></span></label>
-              <label><img className="coin" src={ethereumIcon} /> $<span className="js-eth-quote"></span></label>
-              <label><img className="coin" src={xrpIcon} /> $<span className="js-xrp-quote"></span></label>
+              <label><img className="coin" /> $<span className="js-btc-quote"></span></label>
+              <label><img className="coin" /> $<span className="js-eth-quote"></span></label>
+              <label><img className="coin" /> $<span className="js-xrp-quote"></span></label>
             </div>
             <form id="newOrder">
               <div className="coins d-flex justify-content-between">
@@ -88,9 +85,9 @@ function Vault() {
           <div className="wallet-option d-flex align-items-center justify-content-between">
             <h3 className="mb-1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Orders</h3>
             <div>
-              <img className="js-btc-tab tab-icon" src={bitcoinIcon} />
-              <img className="js-eth-tab tab-icon" src={ethereumIcon} />
-              <img className="js-xrp-tab tab-icon" src={xrpIcon} />
+              <img className="js-btc-tab tab-icon" />
+              <img className="js-eth-tab tab-icon" />
+              <img className="js-xrp-tab tab-icon" />
             </div>
           </div>
 

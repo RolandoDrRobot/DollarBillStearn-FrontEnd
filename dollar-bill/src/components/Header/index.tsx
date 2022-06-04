@@ -44,16 +44,6 @@ function Header() {
                 <span className="status connected"></span>
                 <img src={logoutWalletIcon} alt="" />
               </div>
-              <div className="wallet-connection d-flex justify-content-center align-items-center">
-                <span className="status connected"></span>
-                <img src={metamaskIcon} alt="" />
-              </div>
-              <div className="wallet-balance d-flex align-items-center">
-                <span className="d-flex align-items-center">
-                  <img src={logoutWalletIcon} alt="" />
-                  <p>20.000</p>
-                </span>
-              </div> 
             </div>
             <div className="side-options d-flex align-items-center justify-content-end">
             <Link to="/news" className="button">
@@ -63,7 +53,7 @@ function Header() {
           </div>
         : isLoading === true 
         ? <Loading /> 
-        : <button className="connect-btn d-flex align-items-center justify-content-center m-0" onClick={connect}>
+        : <button className="main-button d-flex align-items-center justify-content-center m-0" onClick={connect}>
             <img src={metamaskIcon} alt="" />
             Connect your wallet
           </button>

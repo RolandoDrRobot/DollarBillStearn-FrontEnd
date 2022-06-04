@@ -1,0 +1,19 @@
+.vaults-room-status {
+  padding: 15px 0 15px 15px;
+}
+
+.vaults-room-status .vaults-status-icon {
+  width: 70px;
+}
+
+.vaults-room-status .vaults-status img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  filter: grayscale(50%);
+}
+
+.vaults-room-status .vaults-status {
+  font-weight: bold;
+  margin-left: 20px;
+}

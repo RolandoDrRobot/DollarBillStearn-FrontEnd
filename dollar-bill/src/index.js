@@ -11,6 +11,8 @@ import Web3 from 'web3';
 import ConnectOnPageLoad from './components/ConnectPageOnLoad/index';
 import Header from './components/Header/index';
 import Navbar from './components/Navbar/index';
+import CreateVault from './components/CreateVault/index'
+
 import Home from './views/Home/index';
 import SettingsRoom from './views/SettingsRoom/index';
 import StatsRoom from './views/StatsRoom/index';
@@ -36,6 +38,8 @@ ReactDOM.render(
                 <Route path='/settings' element={<SettingsRoom/>}/>
                 <Route path='/stats' element={<StatsRoom/>}/>
                 <Route path='/trading' element={<TradingRoom/>}/>
+
+                <Route path='/createVault' element={<CreateVault/>}/>
               </Routes>
             </div>
             <Navbar/>

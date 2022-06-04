@@ -27,6 +27,7 @@ function Navbar() {
           Trading
         </Link>
       </div>
+      <p className="info-text">AXE Capital Ⓒ 2022 Dollar Bill</p>
     </>
   )
 }

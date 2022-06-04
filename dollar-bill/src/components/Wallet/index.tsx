@@ -1,5 +1,4 @@
 import React from 'react';
-import tetherIcon from '../../assets/img/tether.png';
 import './main.css';
 
 function Wallet() {
@@ -12,7 +11,7 @@ function Wallet() {
       <div className="mt-2">
         <div className="currency row">
           <div className="col-2 mb-1 d-flex align-items-center justify-content-center">
-            <img className="coin" src={tetherIcon} />
+            <img className="coin" />
           </div>
           <div className="col-3 p-1 mb-1 text-center">
             <p className="tourquese m-0"></p>

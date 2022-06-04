@@ -1,6 +1,5 @@
 .navbar {
   width: 100%;
-  max-width: 340px;
   padding: 20px 10px 15px;
   background-color: var(--main-bg-color);
   border-radius: 5px;
@@ -8,7 +7,7 @@
 }
 
 .navbar a {
-  color: var(--main-gray);
+  color: var(--main-blue);
   font-size: 12px;
   margin: 0 auto;
   transition: all 1s;
@@ -32,5 +31,5 @@
   width: 40px;
   margin: 0 auto 10px;
   transition: all 1s;
-  filter: drop-shadow(0 0 2px var(--main-gray));
+  filter: drop-shadow(0 0 2px var(--main-blue));
 }

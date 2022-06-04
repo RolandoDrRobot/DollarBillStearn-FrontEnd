@@ -3,7 +3,7 @@
   width: 35px;
   height: 35px;
   animation: spin 2s infinite linear;
-  filter: drop-shadow(0 0 0px var(--black));
+  filter: drop-shadow(0 0 0px var(--white));
 }
 
 @keyframes spin {

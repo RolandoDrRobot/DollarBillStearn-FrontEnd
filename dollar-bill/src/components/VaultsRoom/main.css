@@ -1,0 +1,8 @@
+.vault .main-button {
+  padding: 0 15px;
+}
+
+.vault .main-button img {
+  width: 35px;
+  filter: grayscale(50%);
+}
