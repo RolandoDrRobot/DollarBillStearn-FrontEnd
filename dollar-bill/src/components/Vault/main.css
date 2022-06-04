@@ -1,0 +1,201 @@
+/* -----------------------
+/* --- Dashboard --- 
+/* -------------------- */
+
+/* -----------------------
+  /* --- Trade Box --- 
+  /* -------------------- */
+.trade-box {
+  margin-top: 20px;
+}
+
+#trade-box {
+  height: 80vh;
+}
+
+#newOrder {
+  background-color: var(--main-bg-color);
+  padding: 13px;
+  border-radius: 5px;
+}
+
+.option {
+  padding: 4px 0;
+  border: 2px solid var(--main-bg-color);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.option:hover,
+.option--selected,
+.option:hover p,
+.option--selected p {
+  color: var(--dark-tourquese) !important;
+  background-color: #fff;
+}
+
+.option p {
+  line-height: 2.1;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.option input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.coins .option {
+  width: 30%;
+}
+
+.transanction-type .option {
+  width: 23%;
+}
+
+.amount input,
+.submit-order input {
+  width: 48%;
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+.amount label,
+.submit-order button {
+  font-size: 16px;
+}
+
+.estimaded-order {
+  width: 48%;
+  text-align: left;
+}
+
+.submit-btn {
+  font-weight: 600;
+  border: 0;
+  background-color: var(--tourquese);
+  width: 48%;
+  height: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: auto;
+}
+
+.submit-btn:hover {
+  background-color: var(--normal-tourquese);
+}
+
+
+/* -----------------------
+  /* --- Confirmation --- 
+  /* -------------------- */
+
+.modal-content {
+  margin-top: 70px;
+  border-radius: 10px !important;
+}
+
+.order-result {
+  padding: 40px 30px;
+  border-radius: 8px;
+  background: var(--dark-tourquese);
+  border: 4px solid var(--main-bg-color);
+}
+
+.order-result-done {
+  padding: 40px 30px;
+  border-radius: 8px;
+}
+
+.confirm-order .order-result img {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.order-result.error {
+  text-align: center;
+  border: 4px solid rgb(128, 0, 0, 0.6);
+  background: rgb(84, 1, 1, 1);
+}
+
+.order-result-done.success {
+  text-align: center;
+  border: 4px solid rgba(0, 128, 38, 0.6);
+  background: rgba(0, 76, 23, 1);
+}
+
+/* -----------------------
+  /* --- Orders --- 
+  /* -------------------- */
+
+.order {
+  position: relative;
+  padding: 15px 6px 11px 0px;
+  border-radius: 4px;
+}
+
+.order.buy {
+  background-color: rgba(0, 128, 38, 0.6);
+}
+
+.order.sell {
+  background-color: rgb(128, 0, 0, 0.6);
+}
+
+.orders-tab {
+  transition: all 0.5s;
+}
+
+.tab-icon {
+  cursor: pointer;
+}
+
+.close-order {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.close-order img {
+  width: 21px !important;
+}
+
+.orders img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.order-img {
+  width: 22%;
+  text-align: center;
+}
+
+.order-amount,
+.order-cost,
+.order-price {
+  font-size: 14px;
+  text-align: center;
+  width: 26%;
+}
+
+.order-data {
+  text-align: center;
+  width: 50%;
+}
+
+.order-market-limit {
+  text-align: center;
+  width: 39%;
+}

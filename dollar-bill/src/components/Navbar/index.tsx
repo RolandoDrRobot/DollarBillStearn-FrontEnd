@@ -16,7 +16,7 @@ function Navbar() {
         </Link>
        <Link to="/" className="button">
           <img src={homeIcon} alt="" />
-          Home
+          Vaults
         </Link>
         <Link to="/stats" className="button">
           <img src={statsIcon} alt="" />
