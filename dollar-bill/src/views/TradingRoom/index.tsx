@@ -1,12 +1,18 @@
 import React from 'react';
-import Vault from '../../components/Vault/index';
+import Wallet from '../../components/Wallet/index';
 import './main.css';
+
+interface nftMetaData {
+  name: any,
+  image: any,
+  tokenId: any
+}
 
 function TradingRoom() {
   return (
     <>
       <div className="view-container">
-        <Vault/>
+        <Wallet/>
       </div>
     </>
   )

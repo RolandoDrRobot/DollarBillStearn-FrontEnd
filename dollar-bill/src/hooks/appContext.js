@@ -1,15 +1,16 @@
 
 import * as React from 'react';
-import { useLocalStorage } from './useLocalStorage';
+import useVaults from './useVaults';
 
 const globalContext = React.createContext();
 
 // Provider in your app
 function GlobalContextProvider(props) {
+  const vaults = useVaults();
 
   return (
     <globalContext.Provider value={{
-      
+      vaults
     }}>
     {props.children}
     </globalContext.Provider>

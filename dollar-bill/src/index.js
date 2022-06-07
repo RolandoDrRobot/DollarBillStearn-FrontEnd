@@ -34,12 +34,11 @@ ReactDOM.render(
             <Header/>
             <div id="content">
               <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/settings' element={<SettingsRoom/>}/>
-                <Route path='/stats' element={<StatsRoom/>}/>
-                <Route path='/trading' element={<TradingRoom/>}/>
-
-                <Route path='/createVault' element={<CreateVault/>}/>
+                <Route path='/' element={<Home/>} />
+                <Route path='/settings' element={<SettingsRoom/>} />
+                <Route path='/stats' element={<StatsRoom/>} />
+                <Route path='/trading:vault' element={<TradingRoom/>} />
+                <Route path='/createVault' element={<CreateVault/>} />
               </Routes>
             </div>
             <Navbar/>

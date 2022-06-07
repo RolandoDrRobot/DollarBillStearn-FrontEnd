@@ -1,5 +1,6 @@
 .vault .main-button {
   padding: 0 15px;
+  text-transform: capitalize;
 }
 
 .vault .main-button img {
