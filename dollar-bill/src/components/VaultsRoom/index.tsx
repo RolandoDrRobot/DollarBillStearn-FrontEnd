@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
@@ -16,13 +15,15 @@ function VaultsRoom() {
     vaults
    } = React.useContext(globalContext);
 
+   console.log(vaults)
+
   return (
     <>
       <div className="vault mt-3">
         {
           vaults ? vaults.map(function(item:any, i:any) {
             return (
-              <Link to={`/trading/${item.id}`} key={i} className="main-button d-flex align-items-center justify-content-between">
+              <Link to={`/trading/${i}`} key={i} className="main-button d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center">
                   <img 
                     src={
