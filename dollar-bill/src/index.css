@@ -94,7 +94,7 @@ button {
 .info-text {
   text-align: center;
   font-size: 12px;
-  margin: 6px;
+  margin: 10px;
   color: var(--info-color);
 }
 

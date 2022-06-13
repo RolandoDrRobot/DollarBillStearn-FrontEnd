@@ -7,16 +7,13 @@ import binanceIcon from '../../assets/img/coins/binanceIcon.png';
 import ftxIcon from '../../assets/img/coins/ftxIcon.png';
 import './main.css';
 
-
 function VaultsRoom() {
 
   const { account } = useWeb3React();
 
   const { 
     vaults
-   } = React.useContext(globalContext);
-
-  console.log(vaults);
+    } = React.useContext(globalContext);
 
   return (
     <>
@@ -30,14 +27,15 @@ function VaultsRoom() {
                     src={
                       item.exchange === 'binance' ? binanceIcon
                       : item.exchange === 'ftx' ? ftxIcon
-                      : '' }
+                      : ''
+                    }
                     className="exchange-logo" 
                     alt="" 
                   />
-                  Vault: {item.name}
+                  {item.name}
                 </div>
                 <div>
-                  {item.exchange}
+                  $ {item.usdTotalBalance.toFixed(2)}
                 </div>
               </Link>
             )
