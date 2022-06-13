@@ -36,9 +36,9 @@ ReactDOM.render(
               <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/settings' element={<SettingsRoom/>} />
+                <Route path='/createVault' element={<CreateVault/>} />
                 <Route path='/stats' element={<StatsRoom/>} />
                 <Route path='/trading:vault' element={<TradingRoom/>} />
-                <Route path='/createVault' element={<CreateVault/>} />
               </Routes>
             </div>
             <Navbar/>
