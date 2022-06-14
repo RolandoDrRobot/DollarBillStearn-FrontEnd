@@ -98,6 +98,24 @@ button {
   color: var(--info-color);
 }
 
-.error {
-  color: var(--alert);
+/* Error Plugin Styles */
+#__react-alert__ div div div {
+  width: 100% !important;
+  color: var(--main-bg-color-secondary) !important;
+  background-color: var(--main-blue) !important;
+  font-family: 'Quicksand', sans-serif !important;
+  text-transform: initial !important;
+  font-weight: bold !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 20px !important;
+  border-radius: 5px;
+}
+
+#__react-alert__ div div div svg {
+  stroke: var(--main-bg-color-secondary) !important;
+}
+
+#__react-alert__ div div div svg:hover {
+  stroke: var(--info-color) !important;
 }

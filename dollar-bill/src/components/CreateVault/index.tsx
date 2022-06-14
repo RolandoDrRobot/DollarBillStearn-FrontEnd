@@ -1,26 +1,21 @@
 import React from 'react';
 import axios from 'axios';
 import Loading from '../../components/Loading/index';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
+import { useAlert } from 'react-alert';
 import './main.css';
 
 function NewUser() {
 
   const { account } = useWeb3React();
-  const navigate = useNavigate();
+  const alert = useAlert();
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
-  let [error, setError] = React.useState<boolean>(false);
-  let [createVaultStatus, setCreateVaultStatus] = React.useState<any>('When you create an account, you agree to complain with our TOS');
 
   const CreateVault = async (name: string, api: string, apiSecret: string, exchange: string, owner: string) => {
     setIsLoading(true);
     await axios.post('http://localhost:443/createVault', { name: name, api: api, apiSecret: apiSecret, exchange: exchange, owner: owner  }).then((response) => {
-      setCreateVaultStatus(response.data.status);
-      setError(true);
-      if (response.data.status === 'created') {
-        navigate('/', { replace: true });
-      }
+      alert.show(response.data.status);
     }).then(() => {
       setIsLoading(false);
     });
@@ -55,7 +50,7 @@ function NewUser() {
             </select>
             <p className="info-text mb-4">Please select an exchange</p>
             <button type="submit" className="main-button mb-2">Create Vault</button>
-            <p className={ error ? "info-text error mb-3" : "info-text mb-3" }>{createVaultStatus}</p>
+            <p className="info-text mb-3">When you create an account, you agree to complain with our TOS</p>
             { isLoading === true ? <Loading /> : <></> }
             <Link to="/" className="text-center d-block mt-5 mb-4">Go back</Link>
           </form>
