@@ -16,21 +16,7 @@ function VaultsRoom() {
 
   React.useEffect(() => {
     setIsLoading(true);
-    if (vaults.length && account) {
-      setIsLoading(false);
-
-      Object.entries(vaults[1].balance).map(item => {
-        console.log(item)
-      })
-      
-      Object.entries(vaults[1].balance).forEach(item => {
-        console.log(item)
-      })
-      
-      for (const item of Object.entries(vaults[1].balance)) {
-        console.log(item)
-      }
-    }
+    if (vaults.length && account) setIsLoading(false);
   }, [vaults, account]);
 
   return (
