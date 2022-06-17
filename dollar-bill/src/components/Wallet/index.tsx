@@ -44,7 +44,6 @@ function Wallet() {
           }
         }
         wallets.push(wallet);
-        console.log(wallet);
       }
     }
   }
@@ -78,13 +77,16 @@ function Wallet() {
                 <strong><label>COIN</label></strong>
               </div>
               <div className="col-3 p-1 mb-1 text-center">
-                <strong><label>Total</label></strong>
+                <strong><label>Total</label></strong><br></br>
+                <label className="info-text m-0">${vaults[vaultID].usdTotalBalance.total.toFixed(2)}</label>
               </div>
               <div className="col-3 p-1 text-center">
-                <strong><label>In Order</label></strong>
+                <strong><label>In Order</label></strong><br></br>
+                <label className="info-text m-0">${vaults[vaultID].usdTotalBalance.used.toFixed(2)}</label>
               </div>
               <div className="col-3 p-1 text-center">
-                <strong><label>Free</label></strong>
+                <strong><label>Free</label></strong><br></br>
+                <label className="info-text m-0">${vaults[vaultID].usdTotalBalance.free.toFixed(2)}</label>
               </div>
             </div>
         {
@@ -96,16 +98,16 @@ function Wallet() {
                     {item.tokenName}
                   </div>
                   <div className="col-3 p-1 mb-1 text-center">
-                    <p className="tourquese m-0">{item.balance.total.toFixed(2)}</p>
-                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
+                    <p className="m-0">{item.balance.total.toFixed(2)}</p>
+                    <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
                   </div>
                   <div className="col-3 p-1 text-center">
-                    <p className="tourquese m-0">{item.balance.used.toFixed(2)}</p>
-                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
+                    <p className="m-0">{item.balance.used.toFixed(2)}</p>
+                    <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
                   </div>
                   <div className="col-3 p-1 text-center">
-                    <p className="tourquese m-0">{item.balance.free.toFixed(2)}</p>
-                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
+                    <p className="m-0">{item.balance.free.toFixed(2)}</p>
+                    <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
                   </div>
                 </div>
               </div>

@@ -13,7 +13,7 @@ function VaultsRoomStatus() {
 
   React.useEffect(() => {
     vaults ? vaults.map(function(item:any, i:any) {
-      setTotalValue(totalValue + item.usdTotalBalance)
+      setTotalValue(totalValue + item.usdTotalBalance.total)
     }) : <></>
   }, [vaults])
 

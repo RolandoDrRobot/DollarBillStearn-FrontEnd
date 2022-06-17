@@ -22,7 +22,7 @@ function Navbar() {
           <img src={statsIcon} alt="" />
           Stats
         </Link>
-        <Link to="/trading" className="button">
+        <Link to="/trading/0" className="button">
           <img src={tradingIcon} alt="" />
           Trading
         </Link>

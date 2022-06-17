@@ -50,7 +50,7 @@ function VaultsRoom() {
                           {item.name}
                         </div>
                         <div>
-                          $ {item.usdTotalBalance.toFixed(2)}
+                          $ {item.usdTotalBalance.total.toFixed(2)}
                         </div>
                       </Link>
                     )
