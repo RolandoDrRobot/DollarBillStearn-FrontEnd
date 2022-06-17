@@ -25,7 +25,9 @@ function VaultsRoom() {
         { 
           isLoading 
             ? <>
-                <Loading />
+                <div className='mb-4'>
+                  <Loading />
+                </div>
                 <p className="info-text">
                   { account ? 'We are loading your vaults' : 'Connect your wallet' }
                 </p>

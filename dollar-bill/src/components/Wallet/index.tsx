@@ -12,6 +12,11 @@ interface wallet {
     used: number,
     total: number
   }
+  usdBalance: {
+    free: number,
+    used: number,
+    total: number
+  }
 }
 
 function Wallet() {
@@ -24,15 +29,23 @@ function Wallet() {
   
   function setWalletsBalance() {
     for (const token in vaults[vaultID].balance) {
-      const wallet:wallet = {
-        tokenName: token,
-        balance: {
-          free: vaults[vaultID].balance[token].free,
-          used:  vaults[vaultID].balance[token].used,
-          total:  vaults[vaultID].balance[token].total
+      if (vaults[vaultID].balance[token] && vaults[vaultID].usdBalance[token]) {
+        const wallet:wallet = {
+          tokenName: token,
+          balance: {
+            free: vaults[vaultID].balance[token].free,
+            used:  vaults[vaultID].balance[token].used,
+            total:  vaults[vaultID].balance[token].total
+          },
+          usdBalance: {
+            free: vaults[vaultID].usdBalance[token].free,
+            used:  vaults[vaultID].usdBalance[token].used,
+            total:  vaults[vaultID].usdBalance[token].total
+          }
         }
+        wallets.push(wallet);
+        console.log(wallet);
       }
-      wallets.push(wallet);
     }
   }
 
@@ -47,13 +60,14 @@ function Wallet() {
   return (
     <>
       <div className="headline d-flex align-items-center justify-content-between mb-3">
-        <h3 className="m-0">Wallet</h3>
-        <h3 className="d-inline m-0"></h3>
+        <h3 className="m-0"></h3>
       </div>
       {
         isLoading 
         ? <>
-            <Loading />
+            <div className='mb-4'>
+              <Loading />
+            </div>
             <p className="info-text">
               { account ? 'We are loading your wallets' : 'Connect your wallet' }
             </p>
@@ -83,12 +97,15 @@ function Wallet() {
                   </div>
                   <div className="col-3 p-1 mb-1 text-center">
                     <p className="tourquese m-0">{item.balance.total.toFixed(2)}</p>
+                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
                   </div>
                   <div className="col-3 p-1 text-center">
                     <p className="tourquese m-0">{item.balance.used.toFixed(2)}</p>
+                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
                   </div>
                   <div className="col-3 p-1 text-center">
                     <p className="tourquese m-0">{item.balance.free.toFixed(2)}</p>
+                    <p className="tourquese m-0">{item.usdBalance.total.toFixed(2)}</p>
                   </div>
                 </div>
               </div>
