@@ -98,6 +98,19 @@ button {
   color: var(--info-color);
 }
 
+.accordion-button:not(.collapsed) {
+  color: var(--main-blue) !important;
+  background-color: var(--main-bg-color-secondary) !important;
+  box-shadow: unset !important;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: unset !important;
+  outline: 0;
+  box-shadow: unset !important;
+}
+
 /* Error Plugin Styles */
 #__react-alert__ div div div {
   width: 100% !important;

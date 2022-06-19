@@ -17,6 +17,8 @@ import Home from './views/Home/index';
 import SettingsRoom from './views/SettingsRoom/index';
 import StatsRoom from './views/StatsRoom/index';
 import TradingRoom from './views/TradingRoom/index';
+import News from './views/News/index';
+import Market from './views/Market/index';
 
 import './index.css';
 
@@ -39,6 +41,8 @@ ReactDOM.render(
                 <Route path='/createVault' element={<CreateVault/>} />
                 <Route path='/stats' element={<StatsRoom/>} />
                 <Route path='/trading/:vaultID' element={<TradingRoom/>} />
+                <Route path='/news/' element={<News/>} />
+                <Route path='/market' element={<Market/>} />
               </Routes>
             </div>
             <Navbar/>

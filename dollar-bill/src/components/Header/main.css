@@ -8,7 +8,6 @@
 }
 
 .header .wallet-info {
-  width: 85%;
   font-size: 12px;
   border-radius: 5px;
 }
@@ -36,13 +35,13 @@
   border-radius: 5px;
 }
 
-.header .side-options {
-  width: 15%;
-}
-
 .header .side-options img {
   width: 30px;
   height: 30px;
   position: relative;
   filter: grayscale(50%);
+}
+
+.header .news-icon {
+  margin-left: 15px;
 }

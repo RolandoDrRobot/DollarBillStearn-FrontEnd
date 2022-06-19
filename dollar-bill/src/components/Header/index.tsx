@@ -1,6 +1,7 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
-import botIcon from '../../assets/img/botIcon.png';
+import newsIcon from '../../assets/img/newsIcon.png';
+import marketIcon from '../../assets/img/marketIcon.png';
 import logoutWalletIcon from '../../assets/img/off.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
@@ -38,7 +39,7 @@ function Header() {
 
   return (
     <>{(active)
-        ? <div className="header d-flex">
+        ? <div className="header d-flex justify-content-between">
             <div className="wallet-info d-flex justify-content-between">
               <div className="wallet-logout d-flex align-items-center" onClick={disconnect}>
                 <span className="status connected"></span>
@@ -46,9 +47,12 @@ function Header() {
               </div>
             </div>
             <div className="side-options d-flex align-items-center justify-content-end">
-            <Link to="/news" className="button">
-              <img src={botIcon} alt="" />
-            </Link>
+              <Link to="/market" className="button market-icon">
+                <img src={marketIcon} alt="" />
+              </Link>
+              <Link to="/news" className="button news-icon">
+                <img src={newsIcon} alt="" />
+              </Link>
             </div>
           </div>
         : isLoading === true 
