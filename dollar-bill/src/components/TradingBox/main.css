@@ -61,12 +61,14 @@
 .buy-sell-price input {
   width: 65%;
   height: 50px;
+  font-weight: bold;
 }
 
 .coin-amount select,
 .buy-sell-price p {
   width: 33%;
   height: 50px;
+  font-weight: bold;
 }
 
 .buy-sell-price .main-button {

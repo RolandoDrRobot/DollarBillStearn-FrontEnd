@@ -33,6 +33,7 @@
 .header .wallet-info img {
   width: 30px;
   border-radius: 5px;
+  filter: grayscale(40%);
 }
 
 .header .side-options img {

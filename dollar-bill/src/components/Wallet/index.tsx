@@ -4,6 +4,9 @@ import { globalContext } from '../../hooks/appContext';
 import Loading from '../../components/Loading/index';
 import { useParams } from "react-router-dom";
 import vaultIcon from '../../assets/img/home.png';
+
+import binanceIcon from '../../assets/img/coins/binanceIcon.png';
+import ftxIcon from '../../assets/img/coins/ftxIcon.png';
 import './main.css';
 
 interface wallet {
@@ -79,7 +82,14 @@ function Wallet() {
             <div id="walletAccordionContent" className="accordion-collapse collapse show wallet-content" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
               <div className="currency d-flex align-items-center justify-content-center mt-3">
                 <div className="box d-flex align-items-center justify-content-center">
-                  <strong><label>COIN</label></strong>
+                <img src={
+                  vaults[vaultID].exchange === 'binance' ? binanceIcon
+                  : vaults[vaultID].exchange === 'ftx' ? ftxIcon
+                  : ''
+                  }
+                  className="exchange-logo" 
+                  alt="" 
+                />
                 </div>
                 <div className="box p-1 text-center">
                   <strong><label>Total</label></strong><br></br>

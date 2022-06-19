@@ -27,7 +27,7 @@ function TradingBox() {
         isLoading 
         ? <></>
         : <div className="trading-box mb-3" id="tradingBoxAccordion">
-            <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
+            <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
               <img src={tradingIcon} height="30" /> Trading Box
             </button>
 

@@ -19,3 +19,8 @@
 .currency .box {
   width: 25%;
 }
+
+.currency .box img {
+  width: 40px;
+  filter: grayscale(50%);
+}
