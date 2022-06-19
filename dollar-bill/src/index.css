@@ -83,6 +83,7 @@ button {
 }
 
 .main-button:hover {
+  color: var(--main-blue);
   background-color: var(--main-bg-color-secondary);
 }
 

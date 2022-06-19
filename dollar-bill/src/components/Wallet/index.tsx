@@ -71,25 +71,25 @@ function Wallet() {
               </p>
             </div>
           </div>
-        : <div className="wallet" id="walletAccordion">
-            <button className="accordion-button main-button mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#walletAccordionContent" aria-expanded="true" aria-controls="collapseWallet">
+        : <div className="wallet mb-3" id="walletAccordion">
+            <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#walletAccordionContent" aria-expanded="true" aria-controls="collapseWallet">
               <img src={vaultIcon} height="30" />{vaults[vaultID].name} - {vaults[vaultID].exchange}
             </button>
 
-            <div id="walletAccordionContent" className="accordion-collapse collapse show" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
-              <div className="currency row">
-                <div className="col-3 mb-1 d-flex align-items-center justify-content-center">
+            <div id="walletAccordionContent" className="accordion-collapse collapse show wallet-content" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
+              <div className="currency d-flex align-items-center justify-content-center mt-3">
+                <div className="box d-flex align-items-center justify-content-center">
                   <strong><label>COIN</label></strong>
                 </div>
-                <div className="col-3 p-1 mb-1 text-center">
+                <div className="box p-1 text-center">
                   <strong><label>Total</label></strong><br></br>
                   <strong><label className="info-text m-0">${vaults[vaultID].usdTotalBalance.total.toFixed(2)}</label></strong>
                 </div>
-                <div className="col-3 p-1 text-center">
+                <div className="box p-1 text-center">
                   <strong><label>In Order</label></strong><br></br>
                   <strong><label className="info-text m-0">${vaults[vaultID].usdTotalBalance.used.toFixed(2)}</label></strong>
                 </div>
-                <div className="col-3 p-1 text-center">
+                <div className="box p-1 text-center">
                   <strong><label>Free</label></strong><br></br>
                   <strong><label className="info-text m-0">${vaults[vaultID].usdTotalBalance.free.toFixed(2)}</label></strong>
                 </div>
@@ -97,23 +97,21 @@ function Wallet() {
               {
                 wallets.map(function(item:any, i:any) {
                   return (
-                    <div className="mt-2" key={i}>
-                      <div className="currency row">
-                        <div className="col-3 mb-1 d-flex align-items-center justify-content-center">
-                          {item.tokenName}
-                        </div>
-                        <div className="col-3 p-1 mb-1 text-center">
-                          <p className="m-0">{item.balance.total.toFixed(2)}</p>
-                          <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
-                        </div>
-                        <div className="col-3 p-1 text-center">
-                          <p className="m-0">{item.balance.used.toFixed(2)}</p>
-                          <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
-                        </div>
-                        <div className="col-3 p-1 text-center">
-                          <p className="m-0">{item.balance.free.toFixed(2)}</p>
-                          <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
-                        </div>
+                    <div key={i} className="currency d-flex align-items-center justify-content-center mt-2">
+                      <div className="box d-flex align-items-center justify-content-center">
+                        {item.tokenName}
+                      </div>
+                      <div className="box p-1 text-center">
+                        <p className="m-0">{item.balance.total.toFixed(2)}</p>
+                        <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
+                      </div>
+                      <div className="box p-1 text-center">
+                        <p className="m-0">{item.balance.used.toFixed(2)}</p>
+                        <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
+                      </div>
+                      <div className="box p-1 text-center">
+                        <p className="m-0">{item.balance.free.toFixed(2)}</p>
+                        <p className="info-text m-0">${item.usdBalance.total.toFixed(2)}</p>
                       </div>
                     </div>
                   )

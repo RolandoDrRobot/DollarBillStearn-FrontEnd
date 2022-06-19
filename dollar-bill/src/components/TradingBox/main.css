@@ -1,0 +1,84 @@
+.trading-box h3 {
+  font-size: 22px;
+}
+
+.trading-box .accordion-button {
+  padding: 16px 15px;
+  text-transform: capitalize;
+}
+
+.trading-box .accordion-button img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+
+/* -----------------------
+/* --- Trade Box --- 
+/* -------------------- */
+
+.option {
+  padding: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-blue);
+  border-radius: 5px;
+  transition: all 0.5s;
+  background-color: var(--main-bg-color);
+  margin-bottom: 15px;
+}
+
+.option p {
+  line-height: 2.1;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.option input[type=radio] {
+  width: unset;
+  position: absolute;
+  visibility: hidden;
+}
+
+.option:hover,
+.option--selected,
+.option:hover p,
+.option--selected p {
+  background-color: var(--main-bg-color-secondary);
+}
+
+.option {
+  width: 23%;
+  height: 50px;
+}
+
+.coin-amount input,
+.buy-sell-price input {
+  width: 65%;
+  height: 50px;
+}
+
+.coin-amount select,
+.buy-sell-price p {
+  width: 33%;
+  height: 50px;
+}
+
+.buy-sell-price .main-button {
+  padding: 13px 4px;
+}
+
+.buy-sell-price .main-button:hover {
+  color: var(--main-blue);
+  background-color: var(--main-bg-color);
+}
+
+.estimaded-order {
+  width: 48%;
+  text-align: left;
+}

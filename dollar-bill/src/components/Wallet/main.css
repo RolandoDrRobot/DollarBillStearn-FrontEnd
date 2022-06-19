@@ -3,10 +3,19 @@
 }
 
 .wallet .accordion-button {
+  padding: 16px 15px;
   text-transform: capitalize;
 }
 
 .wallet .accordion-button img {
   width: 30px !important;
   height: 30px !important;
+}
+
+.wallet-content {
+  padding-bottom: 50px;
+}
+
+.currency .box {
+  width: 25%;
 }
