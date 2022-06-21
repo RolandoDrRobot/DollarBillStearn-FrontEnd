@@ -17,6 +17,10 @@
 /* --- Trade Box --- 
 /* -------------------- */
 
+.trade-box {
+  background: linear-gradient(140deg, var(--main-bg-color) 0%, var(--main-bg-color-secondary) 100%);
+}
+
 .option {
   padding: 8px 0;
   border-radius: 5px;

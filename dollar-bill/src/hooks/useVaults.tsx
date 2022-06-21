@@ -12,7 +12,7 @@ const useVaults = () => {
           setVaults(response.data);
         });
       }
-      Vaults()
+      Vaults();
     }, [account]);
 
   return vaults;

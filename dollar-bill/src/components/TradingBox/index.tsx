@@ -1,12 +1,15 @@
 import React from 'react';
+import axios from 'axios';
 import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
 import { useParams } from "react-router-dom";
+import { useAlert } from 'react-alert';
 import tradingIcon from '../../assets/img/trading.png';
 import './main.css';
 
 function TradingBox() {
 
+  const alert = useAlert();
   const { vaultID }:any = useParams();
   const { account } = useWeb3React();
   const { vaults } = React.useContext(globalContext);
@@ -21,6 +24,42 @@ function TradingBox() {
     }
   }, [vaults, account]);
 
+  // Calculate estimated cost by coin
+  // Calculate estimated cost gas
+  // Open order
+
+  const CalculateEstimatedCostByCoin = async () => {
+
+  }
+
+  const CalculateEstimatedCostByGas = async () => {
+
+  }
+
+  const OpenOrder = async (symbol: string, type: string, side: string, amount: string, estimatedCost:string, price:string, owner: string) => {
+    setIsLoading(true);
+    await axios.post('http://localhost:443/openOrder', { symbol: symbol, type: type, side: side, amount: amount, estimatedCost: estimatedCost, price: price, owner: owner }).then((response:any) => {
+      alert.show(response.data.status);
+    }).then(() => {
+      setIsLoading(false);
+    });
+  }
+
+  const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const target = e.target as typeof e.target & {
+      symbol: { value: string };
+      type: { value: string };
+      side: { value: string };
+      amount: { value: string };
+      estimatedCost: { value: string };
+      price: { value: string };
+    };
+    
+    if (account && target.symbol && target.type && target.side && target.amount && target.estimatedCost && target.price) 
+      OpenOrder(account, target.symbol.value, target.type.value, target.side.value, target.amount.value, target.estimatedCost.value, target.price.value);
+  }
+
   return (
     <>
       {
@@ -33,7 +72,7 @@ function TradingBox() {
 
             <div id="tradingBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="tradingBoxContent" data-bs-parent="#tradingBoxAccordion">
               <div className="trade-box mt-3">
-                <form id="newOrder">
+                <form id="newOrder" onSubmit={onSubmitForm}>
                   <div className="d-flex justify-content-between">
                     <div className="option market">
                       <input type="radio" className="" name="operation-type" value="market" />
@@ -53,7 +92,7 @@ function TradingBox() {
                     </div>
                   </div>
                   <div className="coin-amount d-flex justify-content-between align-items-center mb-3">
-                    <input type="number" placeholder="Coin amount to trade" />
+                    <input type="number" name="name" placeholder="Coin amount to trade" />
                     <select name="coin">
                       <option>BTC</option>
                       <option>ETH</option>
@@ -65,7 +104,7 @@ function TradingBox() {
                     </select>
                   </div>
                   <div className="buy-sell-price d-flex justify-content-between align-items-center mb-3">
-                    <input type="number" className="submit-order" placeholder="Price to buy or sell" />
+                    <input type="number" name="price" className="submit-order" placeholder="Price to buy or sell" />
                     <p className="main-button m-0 text-center">$ 0</p>
                   </div>
                   <button type="submit" className="main-button submit-btn">Create Order</button>
