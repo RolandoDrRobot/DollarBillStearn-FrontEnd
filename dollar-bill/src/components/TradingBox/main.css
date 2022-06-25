@@ -32,7 +32,6 @@
   border-radius: 5px;
   transition: all 0.5s;
   background-color: var(--main-bg-color);
-  margin-bottom: 15px;
 }
 
 .option p {
@@ -63,14 +62,14 @@
 
 .coin-amount input,
 .buy-sell-price input {
-  width: 65%;
+  width: 58%;
   height: 50px;
   font-weight: bold;
 }
 
 .coin-amount select,
 .buy-sell-price p {
-  width: 33%;
+  width: 40%;
   height: 50px;
   font-weight: bold;
 }

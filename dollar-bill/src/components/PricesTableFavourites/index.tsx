@@ -66,13 +66,13 @@ function PricesTableFavourites() {
                                 <strong>{item.symbol.replace('/USDT','')}</strong>
                               </div>
                               <div className="box p-1">
-                                <p className={item.binanceTicker.percentage > 0 ? 'm-0 positive text-center' : 'm-0 negative text-center'}>%{item.binanceTicker.percentage.toFixed(2)}</p>
+                                <p className={item.binance.percentage > 0 ? 'm-0 positive text-center' : 'm-0 negative text-center'}>%{item.binance.percentage.toFixed(2)}</p>
                               </div>
                               <div className="box p-1">
-                                <p className="m-0">${item.binanceTicker.price.toFixed(2)}</p>
+                                <p className="m-0">${item.binance.price.toFixed(2)}</p>
                               </div>
                               <div className="box p-1">
-                                <p className="m-0">{item.ftxTicker.price ? `$ ${item.ftxTicker.price.toFixed(2)}` : ''}</p>
+                                <p className="m-0">{item.ftx.price ? `$ ${item.ftx.price.toFixed(2)}` : ''}</p>
                               </div>
                             </div>
                           : <></>

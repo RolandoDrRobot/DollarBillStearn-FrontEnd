@@ -83,7 +83,8 @@ button {
   background-color: var(--main-bg-color);
 }
 
-.main-button:hover {
+.main-button:hover,
+.selected {
   color: var(--main-blue);
   background-color: var(--main-bg-color-secondary);
 }
