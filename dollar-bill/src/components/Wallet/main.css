@@ -13,7 +13,10 @@
 }
 
 .wallet-content {
-  padding-bottom: 50px;
+  padding-bottom: 24px;
+}
+
+.currency {
   background: linear-gradient(140deg, var(--main-bg-color) 0%, var(--main-bg-color-secondary) 100%);
 }
 

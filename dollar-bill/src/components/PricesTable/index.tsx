@@ -45,7 +45,7 @@ function PricesTable() {
                 <Loading />
               </div>
               <p className="info-text">
-                { account ? 'We are loading your wallets' : 'Connect your wallet' }
+                { account ? 'We are loading the markets' : 'Connect your wallet' }
               </p>
             </div>
           </div>
@@ -61,13 +61,13 @@ function PricesTable() {
                 <strong><p className='text-center'>Ticker</p></strong>
                 </div>
                 <div className="box p-1">
+                  <strong><p className='text-center'>Update</p></strong>
+                </div>
+                <div className="box p-1">
                   <strong><p>Binance</p></strong>
                 </div>
                 <div className="box p-1">
                   <strong><p>FTX</p></strong>
-                </div>
-                <div className="box p-1">
-                  <strong><p>Update</p></strong>
                 </div>
               </div>
               {
@@ -85,13 +85,13 @@ function PricesTable() {
                         <strong>{item.symbol.replace('/USDT','')}</strong>
                       </div>
                       <div className="box p-1">
-                        <p className="m-0">${item.binanceTicker.price.toFixed(1)}</p>
+                        <p className={item.binanceTicker.percentage > 0 ? 'm-0 positive text-center' : 'm-0 negative text-center'}>%{item.binanceTicker.percentage.toFixed(2)}</p>
                       </div>
                       <div className="box p-1">
-                        <p className="m-0">{item.ftxTicker.price ? `$ ${item.ftxTicker.price.toFixed(1)}` : ''}</p>
+                        <p className="m-0">${item.binanceTicker.price.toFixed(2)}</p>
                       </div>
                       <div className="box p-1">
-                        <p className={item.binanceTicker.percentage > 0 ? 'm-0 positive' : 'm-0 negative'}>%{item.binanceTicker.percentage.toFixed(2)}</p>
+                        <p className="m-0">{item.ftxTicker.price ? `$ ${item.ftxTicker.price.toFixed(2)}` : ''}</p>
                       </div>
                     </div>
                   )
@@ -99,7 +99,7 @@ function PricesTable() {
               }
             </div>
             <p className="info-text">
-              { account ? 'Here you can open a trade' : 'Connect your wallet' }
+              { account ? 'This is the market today' : 'Connect your wallet' }
             </p>
           </div>
         </div>
