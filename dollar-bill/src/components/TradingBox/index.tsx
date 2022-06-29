@@ -22,10 +22,11 @@ function TradingBox() {
   let [amount, setAmount] = React.useState<any>();
   let [orderPrice, setOrderPrice] = React.useState<any>(0);
   let [estimatedCost, setEstimatedCost] = React.useState<any>(0);
+  let [favTickers, setfavTickers] = React.useState<any>([]);
 
   const fetchTickerPrice = async (symbol:any) => {
     let tickerPrice = 0;
-    const exchange = (vaults[vaultID].exchange);
+    const exchange = vaults[vaultID].exchange;
     prices.map(function(item:any, i:any) {
       if (item.symbol === symbol) tickerPrice = item[exchange].price;
     })
@@ -36,6 +37,20 @@ function TradingBox() {
     const cost = await fetchTickerPrice(coinSelected);
     setOrderPrice(cost);
     setEstimatedCost(cost);
+
+    prices.map(function(item:any, i:any) {
+      if (favs.favouriteTickers) {
+        if (favs.favouriteTickers[item.symbol]) {
+          favTickers.push(item.symbol);
+        }
+      }
+    })
+  }
+
+  const updateOrderPrice = async (event:any) => {
+    setOrderPrice(event.target.value);
+    let targetOrderPrice = event.target.value || 0;
+    setEstimatedCost(targetOrderPrice * amount);
   }
 
   const updateCoinSelected = async (event:any) => {
@@ -43,31 +58,47 @@ function TradingBox() {
     const cost = await fetchTickerPrice(event.target.value)
     setOrderPrice(cost);
     setEstimatedCost(cost);
+    setAmount(0);
   }
-  
+
   const updateAmount = async (event:any) => {
     setAmount(event.target.value);
     let targetAmount = event.target.value || 0;
-    const tickerPrice = await fetchTickerPrice(coinSelected);
-    setEstimatedCost(targetAmount * tickerPrice);
+    setEstimatedCost(targetAmount * orderPrice);
   }
 
-  // const OpenOrder = async (symbol: string, type: string, side: string, amount: string, estimatedCost:string, price:string, owner: string) => {
-  //   setIsLoading(true);
-  //   await axios.post('http://localhost:443/openOrder', { symbol: symbol, type: type, side: side, amount: amount, estimatedCost: estimatedCost, price: price, owner: owner }).then((response:any) => {
-  //     alert.show(response.data.status);
-  //   }).then(() => {
-  //     setIsLoading(false);
-  //   });
-  // }
+  const updateEstimatedCost = async (event:any) => {
+    setEstimatedCost(event.target.value);
+    let targetEstimatedCost = event.target.value || 0;
+    setAmount(targetEstimatedCost / orderPrice);
+  }
+
+  const OpenOrder = async () => {
+    setIsLoading(true);
+    await axios.post('http://localhost:443/openOrder',
+      { 
+        symbol: coinSelected, 
+        type: opertaionType, 
+        side: buySell, 
+        amount: amount,
+        price: orderPrice,
+        account: account,
+        exchange: vaults[vaultID].exchange
+      }).then((response:any) => {
+        console.log(response.data);
+        // alert.show(response.data.status);
+      }).then(() => {
+        setIsLoading(false);
+      });
+  }
 
   React.useEffect(() => {
     setIsLoading(true);
-    if (vaults.length && account) {
+    if (vaults.length && account && favs ) {
       initialState();
       setIsLoading(false);
     }
-  }, [vaults.length, account]);
+  }, [vaults.length, account, favs]);
 
   return (
     <>
@@ -97,17 +128,15 @@ function TradingBox() {
                     </div>
                   </div>
                   <div className="coin-amount d-flex justify-content-between align-items-center mb-3">
-                    <input type="number" name="price" className="submit-order" placeholder="Price to buy or sell" value={orderPrice} disabled={opertaionType === 'market'} required />
+                    <input type="number" placeholder="Price to buy or sell" onChange={updateOrderPrice} value={orderPrice || 0} disabled={opertaionType === 'market'} required />
                     <select name="coin" onChange={updateCoinSelected} required>
                       <option disabled>Favourite Tickers</option>
                       {
-                        prices.map(function(item:any, i:any) {
+                        !favTickers.length 
+                          ? <></> 
+                          : favTickers.map(function(item:any, i:any) {
                           return (
-                            favs.favouriteTickers
-                            ? favs.favouriteTickers[item.symbol] 
-                              ? <option key={i}>{item.symbol}</option>
-                              : <></>
-                            : <></>
+                            <option key={i}>{item}</option>
                           )
                         })
                       }
@@ -122,10 +151,10 @@ function TradingBox() {
                     </select>
                   </div>
                   <div className="buy-sell-price d-flex justify-content-between align-items-center mb-3">
-                    <input type="number" name="name" placeholder="Coin amount to trade" onChange={updateAmount} value={amount} required />
-                    <p className="main-button m-0 text-center">$ {estimatedCost}</p>
+                    <input type="number" placeholder="Coin amount to trade" onChange={updateAmount} value={amount || 0} required />
+                    <input type="number" placeholder="Estimated cost" onChange={updateEstimatedCost} value={ estimatedCost || 0 } className="main-button m-0 text-center" />
                   </div>
-                  <button type="submit" className="main-button submit-btn">Create Order</button>
+                  <div className="main-button submit-btn" onClick={OpenOrder}>Create Order</div>
                 </form>
               </div>
               <p className="info-text">
