@@ -29,12 +29,12 @@ function Wallet() {
   const { account } = useWeb3React();
   const { vaults } = React.useContext(globalContext);
   let [isLoading, setIsLoading] = React.useState<boolean>(true);
-  let [wallets, setWallets] = React.useState<any>([]);
+  let [wallet, setWallet] = React.useState<any>([]);
   
   function setWalletsBalance() {
     for (const token in vaults[vaultID].balance) {
       if (vaults[vaultID].balance[token] && vaults[vaultID].usdBalance[token]) {
-        const wallet:wallet = {
+        const tokenInstance:wallet = {
           tokenName: token,
           balance: {
             free: vaults[vaultID].balance[token].free,
@@ -47,7 +47,7 @@ function Wallet() {
             total:  vaults[vaultID].usdBalance[token].total
           }
         }
-        if(wallet.usdBalance.total > 1) wallets.push(wallet);
+        if(tokenInstance.usdBalance.total > 1) wallet.push(tokenInstance);
       }
     }
   }
@@ -105,7 +105,7 @@ function Wallet() {
                 </div>
               </div>
               {
-                wallets.map(function(item:any, i:any) {
+                wallet.map(function(item:any, i:any) {
                   return (
                     <div key={i} className="currency d-flex align-items-center justify-content-center py-2">
                       <div className="box d-flex align-items-center justify-content-center">

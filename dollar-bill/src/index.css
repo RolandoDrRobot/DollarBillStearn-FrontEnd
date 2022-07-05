@@ -81,6 +81,7 @@ button {
   border-radius: 5px;
   transition: all 0.5s;
   background-color: var(--main-bg-color);
+  cursor: pointer;
 }
 
 .main-button:hover,
