@@ -62,7 +62,7 @@ function PricesTableFavourites() {
                         ? favs.favouriteTickers[item.symbol] 
                           ? <div className="prices d-flex align-items-center justify-content-center">
                               <div className="box d-flex align-items-center justify-content-around">
-                                <img src={favIcon} onClick={async () => {await removeFav(item.symbol)}} width="22" height="22" />
+                                <img className="star" src={favIcon} onClick={async () => {await removeFav(item.symbol)}} width="22" height="22" />
                                 <strong>{item.symbol.replace('/USDT','')}</strong>
                               </div>
                               <div className="box p-1">

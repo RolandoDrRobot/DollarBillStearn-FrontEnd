@@ -33,16 +33,17 @@
 .header .wallet-info img {
   width: 30px;
   border-radius: 5px;
-  filter: grayscale(40%);
+  filter: grayscale(30%);
 }
 
 .header .side-options img {
   width: 30px;
   height: 30px;
   position: relative;
-  filter: grayscale(50%);
+  filter: grayscale(30%);
 }
 
-.header .news-icon {
+.header .news-icon,
+.header .market-icon {
   margin-left: 18px;
 }

@@ -5,8 +5,8 @@
   --info-color: #576ab6;
   --white: #fff;
 
-  --positive: #0296b0;
-  --alert: #ea0102;
+  --positive: #00B83B;
+  --alert: #B30024;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
@@ -50,6 +50,16 @@ a:hover {
   text-decoration: none;
 }
 
+.positive {
+  padding: 0 !important;
+  color: var(--positive);
+}
+
+.alert {
+  padding: 0 !important;
+  color: var(--alert);
+}
+
 /* Buttons and Inputs */
 input,
 select {
@@ -71,6 +81,15 @@ button {
   font-weight: 500;
   border: 0;
   background-color: var(--main-bg-color);
+}
+
+.star {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.star:hover {
+  filter: drop-shadow(0 5px 20px var(--main-bg-color-secondary));
 }
 
 .main-button {

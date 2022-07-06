@@ -78,9 +78,9 @@ function PricesTable() {
                         {
                           favs.favouriteTickers
                           ? favs.favouriteTickers[item.symbol] 
-                            ? <img src={favIcon} onClick={async () => {await removeFav(item.symbol)}} width="22" height="22" />
-                            : <img src={nofavIcon} onClick={async () => {await fav(item.symbol)}} width="22" height="22" />
-                          : <img src={nofavIcon} onClick={async () => {await fav(item.symbol)}} width="22" height="22" />
+                            ? <img className="star" src={favIcon} onClick={async () => {await removeFav(item.symbol)}} width="22" height="22" />
+                            : <img className="star" src={nofavIcon} onClick={async () => {await fav(item.symbol)}} width="22" height="22" />
+                          : <img className="star" src={nofavIcon} onClick={async () => {await fav(item.symbol)}} width="22" height="22" />
                         } 
                         <strong>{item.symbol.replace('/USDT','')}</strong>
                       </div>

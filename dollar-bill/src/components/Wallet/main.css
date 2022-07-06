@@ -26,5 +26,5 @@
 
 .currency .box img {
   width: 40px;
-  filter: grayscale(50%);
+  filter: grayscale(30%);
 }
