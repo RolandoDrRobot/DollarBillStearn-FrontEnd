@@ -74,63 +74,7 @@ function Orders() {
           <div id="ordersAccordionContent" className="accordion-collapse collapse" aria-labelledby="ordersContent" data-bs-parent="#ordersAccordion">
             <div className="orders-box mt-3">
             {
-              isLoading === true ? <Loading /> : 
-              formattedOrders.map(function(ticker:any, i:any) {
-                return (
-                  ticker.orders.map(function(item:any, i:any) {
-                    return (
-                      item.status === 'open' ? 
-                        <div key={i} id={ticker.tokenName}>
-                          <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${ticker.tokenName}AccordionContent`} aria-expanded="false" aria-controls={`collapse${ticker.tokenName}`}>
-                            <img src={bookersIcon} height="30" /> {ticker.tokenName} - Open Orders
-                          </button>
-
-                          {/* <div id={`${order.tokenName}AccordionContent`} className="accordion-collapse collapse" aria-labelledby={`${order.tokenName}Content`} data-bs-parent={`#${order.tokenName}Accordion`}>
-                            <div key={i} id={order.id} className="order-record">
-                              <div className="d-flex justify-content-between mb-4">
-                                <div>
-                                  <p>{order.amount}</p>
-                                  <p className="info-text">Amount</p>
-                                </div>
-                                <div>
-                                  <p>${order.cost.toFixed(2)}</p>
-                                  <p className="info-text">Cost</p>
-                                </div>
-                                <div>
-                                  <p>{order.price.toFixed(3)}</p>
-                                  <p className="info-text">Price</p>
-                                </div>
-                              </div>
-                              <div className="order-data d-flex justify-content-between">
-                                <div>
-                                  <p className={order.side === 'buy' ? 'positive' : 'alert' }>{order.side}</p>
-                                  <p className="info-text">Side</p>
-                                </div>
-                                <div>
-                                  <p>{order.status}</p>
-                                  <p className="info-text">Order</p>
-                                </div>
-                                <div>
-                                  <p>{createDate(order.timestamp)}</p>
-                                  <p className="info-text timestamp">Timestamp</p>
-                                </div>
-                              </div>
-                              {
-                                order.status === 'open'
-                                ? <p className="main-button mt-4" onClick={() => {closeOrder(order.id)}}> Cancel Order</p>
-                                : <></>
-                              }
-                            </div>
-                          </div> */}
-                        </div>
-                      : <></>
-                    )
-                  })
-                )
-              })
-            }
-            {
-              isLoading === true ? <></> : 
+              isLoading === true ? <Loading /> :
               formattedOrders.map(function(item:any, i:any) {
                 return (
                   <div key={i} id={item.tokenName}>
