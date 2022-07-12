@@ -1,7 +1,7 @@
 import React from 'react';
 import { globalContext } from '../../hooks/appContext';
 import { Link } from 'react-router-dom';
-import homeIcon from '../../assets/img/home.png';
+import vaultsIcon from '../../assets/img/vault.png';
 import statsIcon from '../../assets/img/stats.png';
 import tradingIcon from '../../assets/img/trading.png';
 import ProfileIcon from '../../assets/img/profile.png';
@@ -14,12 +14,12 @@ function Navbar() {
   return (
     <>
       <div className={isLogued ? 'navbar d-flex' : 'navbar d-flex disabled'}>
-        <Link to="/profile" className="button">
+        <Link to="/" className="button">
           <img src={ProfileIcon} alt="" />
           Home
         </Link>
-       <Link to="/" className="button">
-          <img src={homeIcon} alt="" />
+       <Link to="/vaults" className="button">
+          <img src={vaultsIcon} alt="" />
           Vaults
         </Link>
         <Link to="/stats" className="button">

@@ -3,8 +3,7 @@ import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
 import Loading from '../../components/Loading/index';
 import { useParams } from "react-router-dom";
-import vaultIcon from '../../assets/img/home.png';
-
+import vaultIcon from '../../assets/img/vault.png';
 import binanceIcon from '../../assets/img/coins/binanceIcon.png';
 import ftxIcon from '../../assets/img/coins/ftxIcon.png';
 import './main.css';

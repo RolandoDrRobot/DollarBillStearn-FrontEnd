@@ -13,7 +13,7 @@ import Header from './components/Header/index';
 import Navbar from './components/Navbar/index';
 import CreateVault from './components/CreateVault/index'
 
-import Home from './views/Home/index';
+import Vaults from './views/Vaults/index';
 import ProfileRoom from './views/ProfileRoom/index';
 import StatsRoom from './views/StatsRoom/index';
 import TradingRoom from './views/TradingRoom/index';
@@ -36,8 +36,8 @@ ReactDOM.render(
             <Header/>
             <div id="content">
               <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/profile' element={<ProfileRoom/>} />
+                <Route path='/' element={<ProfileRoom/>} />
+                <Route path='/vaults' element={<Vaults/>} />
                 <Route path='/createVault' element={<CreateVault/>} />
                 <Route path='/stats' element={<StatsRoom/>} />
                 <Route path='/trading/:vaultID' element={<TradingRoom/>} />

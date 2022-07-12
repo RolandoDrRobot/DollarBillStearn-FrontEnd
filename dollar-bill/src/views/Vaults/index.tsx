@@ -6,7 +6,7 @@ import VaultsRoomStatus from '../../components/VaultsRoomStatus/index';
 import ConnectWallet from '../../components/ConnectWallet/index';
 import './main.css';
 
-function Home() {
+function Vaults() {
 
   const { isLogued, setIsLogued } = React.useContext(globalContext);
 
@@ -27,4 +27,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Vaults;

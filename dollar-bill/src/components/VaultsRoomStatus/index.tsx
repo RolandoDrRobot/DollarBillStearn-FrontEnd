@@ -1,6 +1,6 @@
 import React from "react";
 import { globalContext } from '../../hooks/appContext';
-import homeIcon from '../../assets/img/home.png';
+import vaultsIcon from '../../assets/img/vault.png';
 import usdtIcon from '../../assets/img/coins/usdtIcon.png';
 import botIcon from '../../assets/img/bot.png';
 
@@ -21,7 +21,7 @@ function VaultsRoomStatus() {
     <>
       <div className="vaults-room-status d-flex mt-3">
         <div className="d-flex align-items-center justify-content-center">
-          <img className="vaults-status-icon" src={homeIcon} alt="" />
+          <img className="vaults-status-icon" src={vaultsIcon} alt="" />
         </div>
         <div className="vaults-status">
           <div className="d-flex mb-3">
