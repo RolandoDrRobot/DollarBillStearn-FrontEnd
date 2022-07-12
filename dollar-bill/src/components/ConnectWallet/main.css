@@ -11,7 +11,7 @@
 .connect-wallet .main-icon {
   width: 80%;
   border-radius: 10px;
-  filter: drop-shadow(0 2px 2px var(--info-color));
+  filter: drop-shadow(0 0 1px var(--info-color));
   margin-bottom: 46px;
 }
 
