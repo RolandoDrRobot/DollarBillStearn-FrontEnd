@@ -1,4 +1,5 @@
 .connect-wallet {
+  position: relative;
   overflow-y: scroll;
   height: 100%;
   display: flex;
@@ -8,6 +9,23 @@
 }
 
 .connect-wallet .main-icon {
-  width: 70%;
+  width: 80%;
+  border-radius: 10px;
+  filter: drop-shadow(0 2px 2px var(--info-color));
   margin-bottom: 46px;
+}
+
+.connect-wallet .main-button {
+  position: absolute;
+  bottom: 0;
+}
+
+.connect-wallet h1 {
+  font-size: 28px;
+  text-align: center;
+  filter: drop-shadow(0 1px 1px var(--info-color));
+}
+
+.connect-wallet .info-text {
+  font-weight: 500;
 }

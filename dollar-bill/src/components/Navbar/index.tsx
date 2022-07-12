@@ -1,4 +1,5 @@
 import React from 'react';
+import { globalContext } from '../../hooks/appContext';
 import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/img/home.png';
 import statsIcon from '../../assets/img/stats.png';
@@ -7,9 +8,12 @@ import ProfileIcon from '../../assets/img/profile.png';
 import './main.css';
 
 function Navbar() {
+
+  const { isLogued, setIsLogued } = React.useContext(globalContext);
+
   return (
     <>
-      <div className="navbar d-flex ">
+      <div className={isLogued ? 'navbar d-flex' : 'navbar d-flex disabled'}>
         <Link to="/profile" className="button">
           <img src={ProfileIcon} alt="" />
           Home
@@ -27,7 +31,7 @@ function Navbar() {
           Trading
         </Link>
       </div>
-      <p className="info-text">AXE Capital Ⓒ 2022 Dollar Bill</p>
+      <p className="info-text font-cinzel">AXE Capital Ⓒ 2022 Dollar Bill</p>
     </>
   )
 }

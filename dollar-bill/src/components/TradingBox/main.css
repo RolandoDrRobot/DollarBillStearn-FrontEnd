@@ -38,7 +38,7 @@
   line-height: 2.1;
   margin: 0;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   transition: all 0.5s;
 }
 
@@ -66,14 +66,14 @@
 
 .input-box .info-text {
   margin: 4px 0 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .coin-amount input,
 .coin-amount select,
 .buy-sell-price input {
   height: 50px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .buy-sell-price .main-button {

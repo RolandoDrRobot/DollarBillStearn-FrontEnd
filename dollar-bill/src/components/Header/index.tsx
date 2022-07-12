@@ -45,7 +45,7 @@ function Header() {
   return (
     <> <div className="header">
         { active
-        ? <div className="header d-flex justify-content-between">
+        ? <div className="d-flex justify-content-between">
             <div className="wallet-info d-flex justify-content-between">
                 <div className="wallet-logout d-flex align-items-center" onClick={disconnect}>
                   <span className="status connected"></span>

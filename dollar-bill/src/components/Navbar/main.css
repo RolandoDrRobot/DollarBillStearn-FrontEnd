@@ -10,26 +10,18 @@
   color: var(--main-blue);
   font-size: 12px;
   margin: 0 auto;
-  transition: all 1s;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  filter: drop-shadow(0 5px 20px var(--white));
-}
-
-.navbar a:active,
-.navbar a:focus,
-.navbar a:hover,
-.navbar img:active,
-.navbar img:focus,
-.navbar img:hover {
-  filter: drop-shadow(0 5px 20px var(--white));
+  transition: all 1s;
 }
 
 .navbar img {
   display: block;
   width: 40px;
   margin: 0 auto 10px;
-  transition: all 1s;
-  filter: drop-shadow(0 0 2px var(--main-blue));
+}
+
+.navbar.disabled a {
+  filter: grayscale(80%)
 }
