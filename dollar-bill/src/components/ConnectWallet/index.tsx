@@ -33,10 +33,13 @@ function ConnectWallet() {
         ? <Loading /> 
         : <div className="connect-wallet">
             <img className="main-icon" src={mainIcon} alt='' />
+            <h1 className='mb-0'>Dollar Bill Stearn</h1>
+            <p className='info-text mb-3'>AXE CAPITAL</p>
             <button className="main-button d-flex align-items-center justify-content-center m-0" onClick={connect}>
               <img src={metamaskIcon} alt="" />
               Connect your wallet
             </button>
+            <p className='info-text mb-3'>Ultimate Performance Tracker</p>
           </div>
       }
     </>

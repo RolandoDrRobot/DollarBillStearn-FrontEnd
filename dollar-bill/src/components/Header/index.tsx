@@ -43,34 +43,32 @@ function Header() {
   }
 
   return (
-    <>{(active)
+    <> <div className="header">
+        { active
         ? <div className="header d-flex justify-content-between">
             <div className="wallet-info d-flex justify-content-between">
-              <div className="wallet-logout d-flex align-items-center" onClick={disconnect}>
-                <span className="status connected"></span>
-                <img src={logoutWalletIcon} alt="" />
+                <div className="wallet-logout d-flex align-items-center" onClick={disconnect}>
+                  <span className="status connected"></span>
+                  <img src={logoutWalletIcon} alt="" />
+                </div>
+              </div>
+              <div className="side-options d-flex align-items-center justify-content-end">
+                <a href="https://twitter.com/home">
+                  <img src={twitterIcon} alt="" />
+                </a>
+                <Link to="/market" className="button market-icon">
+                  <img src={marketIcon} alt="" />
+                </Link>
+                <Link to="/news" className="button news-icon">
+                  <img src={newsIcon} alt="" />
+                </Link>
               </div>
             </div>
-            <div className="side-options d-flex align-items-center justify-content-end">
-              <a href="https://twitter.com/home">
-                <img src={twitterIcon} alt="" />
-              </a>
-              <Link to="/market" className="button market-icon">
-                <img src={marketIcon} alt="" />
-              </Link>
-              <Link to="/news" className="button news-icon">
-                <img src={newsIcon} alt="" />
-              </Link>
-            </div>
-          </div>
         : isLoading === true 
         ? <Loading /> 
-        : <button className="main-button d-flex align-items-center justify-content-center m-0" onClick={connect}>
-            <img src={metamaskIcon} alt="" />
-            Connect your wallet
-          </button>
+        : <></>        
       }
-      
+      </div>
     </>
   )
 }
