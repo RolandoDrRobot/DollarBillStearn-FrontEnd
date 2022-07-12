@@ -3,7 +3,7 @@ import { globalContext } from '../../hooks/appContext';
 import ConnectWallet from '../../components/ConnectWallet/index';
 import './main.css';
 
-function News() {
+function ProfileRoom() {
 
   const { isLogued, setIsLogued } = React.useContext(globalContext);
 
@@ -13,7 +13,6 @@ function News() {
         {
           isLogued 
           ? <>
-              
             </>
           : <ConnectWallet />
         }
@@ -22,4 +21,4 @@ function News() {
   )
 }
 
-export default News; 
+export default ProfileRoom; 

@@ -7,6 +7,7 @@ import logoutWalletIcon from '../../assets/img/off.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
+import { globalContext } from '../../hooks/appContext';
 import { injected } from '../../config/connector';
 
 import './main.css';
@@ -15,12 +16,14 @@ function Header() {
 
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { active, activate, deactivate } = useWeb3React();
+  const { isLogued, setIsLogued } = React.useContext(globalContext);
 
   async function connect() {
     setIsLoading(true);
     try {
       await activate(injected);
       localStorage.setItem('isWalletConnected', 'true');
+      setIsLogued(true);
     } catch (e) {
       console.log(e);
     }
@@ -32,6 +35,7 @@ function Header() {
     try {
       await deactivate();
       localStorage.setItem('isWalletConnected', 'false');
+      setIsLogued(false);
     } catch (e) {
       console.log(e);
     }

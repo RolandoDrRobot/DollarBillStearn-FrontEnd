@@ -14,7 +14,7 @@ import Navbar from './components/Navbar/index';
 import CreateVault from './components/CreateVault/index'
 
 import Home from './views/Home/index';
-import SettingsRoom from './views/SettingsRoom/index';
+import ProfileRoom from './views/ProfileRoom/index';
 import StatsRoom from './views/StatsRoom/index';
 import TradingRoom from './views/TradingRoom/index';
 import News from './views/News/index';
@@ -37,7 +37,7 @@ ReactDOM.render(
             <div id="content">
               <Routes>
                 <Route path='/' element={<Home/>} />
-                <Route path='/settings' element={<SettingsRoom/>} />
+                <Route path='/profile' element={<ProfileRoom/>} />
                 <Route path='/createVault' element={<CreateVault/>} />
                 <Route path='/stats' element={<StatsRoom/>} />
                 <Route path='/trading/:vaultID' element={<TradingRoom/>} />

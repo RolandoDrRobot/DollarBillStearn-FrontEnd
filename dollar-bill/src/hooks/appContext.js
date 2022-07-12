@@ -12,11 +12,15 @@ function GlobalContextProvider(props) {
   const prices = usePrices();
   const favs = useFavs();
 
+  let [isLogued, setIsLogued] = React.useState(false);
+
   return (
     <globalContext.Provider value={{
       vaults,
       prices,
-      favs
+      favs,
+      isLogued,
+      setIsLogued
     }}>
     {props.children}
     </globalContext.Provider>
