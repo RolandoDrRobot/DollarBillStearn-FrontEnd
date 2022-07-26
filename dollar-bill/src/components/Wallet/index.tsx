@@ -84,9 +84,9 @@ function Wallet() {
               <div className="currency d-flex align-items-center justify-content-center py-2">
                 <div className="box d-flex align-items-center justify-content-center">
                 <img src={
-                  vaults[vaultID].exchange === 'binance' ? binanceIcon
-                  : vaults[vaultID].exchange === 'ftx' ? ftxIcon
-                  : ''
+                    vaults[vaultID].exchange === 'binance' ? binanceIcon
+                    : vaults[vaultID].exchange === 'ftx' ? ftxIcon
+                    : ''
                   }
                   className="exchange-logo" 
                   alt="" 
