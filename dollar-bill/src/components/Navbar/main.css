@@ -1,8 +1,8 @@
 .navbar {
   width: 100%;
   padding: 20px 10px 15px;
-  background-color: var(--main-bg-color);
-  border-radius: 5px;
+  background-color: var(--main-bg-color-secondary);
+  border-radius: 10px;
   margin: auto;
 }
 
@@ -20,6 +20,7 @@
   display: block;
   width: 40px;
   margin: 0 auto 10px;
+  border-radius: 5px;
 }
 
 .navbar.disabled a {

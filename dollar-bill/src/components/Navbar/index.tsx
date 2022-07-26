@@ -2,8 +2,8 @@ import React from 'react';
 import { globalContext } from '../../hooks/appContext';
 import { Link } from 'react-router-dom';
 import vaultsIcon from '../../assets/img/vault.png';
-import statsIcon from '../../assets/img/stats.png';
-import tradingIcon from '../../assets/img/trading.png';
+import nftIcon from '../../assets/img/nftIcon.png';
+import coinIcon from '../../assets/img/coinIcon.png';
 import ProfileIcon from '../../assets/img/profile.png';
 import './main.css';
 
@@ -22,16 +22,16 @@ function Navbar() {
           <img src={vaultsIcon} alt="" />
           Vaults
         </Link>
-        <Link to="/stats" className="button">
-          <img src={statsIcon} alt="" />
-          Stats
+        <Link to="/nfts/0" className="button">
+          <img src={nftIcon} alt="" />
+          NFTs
         </Link>
-        <Link to="/trading/0" className="button">
-          <img src={tradingIcon} alt="" />
-          Trading
+        <Link to="/coins/0" className="button">
+          <img src={coinIcon} alt="" />
+          Coins
         </Link>
       </div>
-      <p className="info-text font-cinzel">AXE Capital Ⓒ 2022 Dollar Bill</p>
+      <p className="info-text font-cinzel">AXE Capital Ⓒ 2022 Dollar Bill Stearn</p>
     </>
   )
 }

@@ -34,7 +34,7 @@ function PricesTableFavourites() {
         ? <></>
         : <div className="fav-box mb-3" id="favBoxAccordion">
             <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#favBoxAccordionContent" aria-expanded="true" aria-controls="collapseFavBox">
-              <img src={favIcon} /> Favourite Tickers
+              <img src={favIcon} height="30" /> Favourite Tickers
             </button>
 
             <div id="favBoxAccordionContent" className="accordion-collapse collapse show" aria-labelledby="favBoxContent" data-bs-parent="#favBoxAccordion">
@@ -83,7 +83,7 @@ function PricesTableFavourites() {
                 })
               }
             </div>
-            <p className="info-text">
+            <p className="info-text mb-5">
               { account ? 'Here are your favourite tickers' : 'Connect your wallet' }
             </p>
           </div>

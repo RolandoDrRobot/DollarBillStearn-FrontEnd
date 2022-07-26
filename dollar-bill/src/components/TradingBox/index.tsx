@@ -5,7 +5,7 @@ import { globalContext } from '../../hooks/appContext';
 import { useParams } from "react-router-dom";
 import { useAlert } from 'react-alert';
 import Loading from '../../components/Loading/index';
-import tradingIcon from '../../assets/img/trading.png';
+import coinIcon from '../../assets/img/coinIcon.png';
 import warningIcon from '../../assets/img/warning.png';
 import './main.css';
 
@@ -176,11 +176,11 @@ function TradingBox() {
     <>
       {
         <div className="trading-box mb-3" id="tradingBoxAccordion">
-          <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
-            <img src={tradingIcon} height="30" /> Trading Box
+          <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
+            <img src={coinIcon} height="30" /> Trading Box
           </button>
 
-          <div id="tradingBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="tradingBoxContent" data-bs-parent="#tradingBoxAccordion">
+          <div id="tradingBoxAccordionContent" className="accordion-collapse collapse show" aria-labelledby="tradingBoxContent" data-bs-parent="#tradingBoxAccordion">
             <div className="trade-box mt-3">
               <form id="newOrder">
                 <div className="d-flex justify-content-between mb-3">
@@ -241,7 +241,7 @@ function TradingBox() {
                 <div className="main-button submit-btn d-flex align-items-center justify-content-center" onClick={() => {setConfirmTradeWindow(true)}}>Create Order</div>
               </form>
             </div>
-            <p className="info-text">
+            <p className="info-text mb-5">
               { account ? 'Here you can open a trade' : 'Connect your wallet' }
             </p>
             {

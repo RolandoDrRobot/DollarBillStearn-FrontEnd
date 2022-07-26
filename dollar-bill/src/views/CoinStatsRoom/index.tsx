@@ -1,12 +1,9 @@
 import React from 'react';
 import { globalContext } from '../../hooks/appContext';
-import Wallet from '../../components/Wallet/index';
-import TradingBox from '../../components/TradingBox/index';
-import Orders from '../../components/Orders/index';
 import ConnectWallet from '../../components/ConnectWallet/index';
 import './main.css';
 
-function TradingRoom() {
+function CoinStatsRoom() {
 
   const { isLogued, setIsLogued } = React.useContext(globalContext);
 
@@ -15,11 +12,7 @@ function TradingRoom() {
       <div className="view-container">
         {
           isLogued 
-          ? <>
-              <Wallet />
-              <Orders />
-              <TradingBox />
-            </>
+          ? <></>
           : <ConnectWallet />
         }
       </div>
@@ -27,4 +20,4 @@ function TradingRoom() {
   )
 }
 
-export default TradingRoom; 
+export default CoinStatsRoom; 

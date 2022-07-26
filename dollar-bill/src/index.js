@@ -11,13 +11,14 @@ import Web3 from 'web3';
 import ConnectOnPageLoad from './components/ConnectPageOnLoad/index';
 import Header from './components/Header/index';
 import Navbar from './components/Navbar/index';
-import CreateVault from './components/CreateVault/index'
 
-import Vaults from './views/Vaults/index';
 import ProfileRoom from './views/ProfileRoom/index';
-import StatsRoom from './views/StatsRoom/index';
-import TradingRoom from './views/TradingRoom/index';
-import News from './views/News/index';
+import Vaults from './views/Vaults/index';
+import CreateVault from './components/CreateVault/index';
+import CoinsRoom from './views/CoinsRoom/index';
+import NFTsRoom from './views/NFTsRoom/index';
+import CoinStatsRoom from './views/CoinStatsRoom/index';
+import NFTStatsRoom from './views/NFTStatsRoom/index';
 import Market from './views/Market/index';
 
 import './index.css';
@@ -39,9 +40,10 @@ ReactDOM.render(
                 <Route path='/' element={<ProfileRoom/>} />
                 <Route path='/vaults' element={<Vaults/>} />
                 <Route path='/createVault' element={<CreateVault/>} />
-                <Route path='/stats' element={<StatsRoom/>} />
-                <Route path='/trading/:vaultID' element={<TradingRoom/>} />
-                <Route path='/news/' element={<News/>} />
+                <Route path='/coins/:vaultID' element={<CoinsRoom/>} />
+                <Route path='/nfts/:vaultID' element={<NFTsRoom/>} />
+                <Route path='/coinstats' element={<CoinStatsRoom/>} />
+                <Route path='/nftstats' element={<NFTStatsRoom/>} />
                 <Route path='/market' element={<Market/>} />
               </Routes>
             </div>

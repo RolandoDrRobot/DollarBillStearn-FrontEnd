@@ -1,7 +1,8 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
-import newsIcon from '../../assets/img/newsIcon.png';
 import marketIcon from '../../assets/img/marketIcon.png';
+import nftStatsIcon from '../../assets/img/nftStatsIcon.png';
+import coinStatsIcon from '../../assets/img/coinStatsIcon.png';
 import twitterIcon from '../../assets/img/twitter.png';
 import logoutWalletIcon from '../../assets/img/off.png';
 import Loading from '../../components/Loading/index';
@@ -43,7 +44,7 @@ function Header() {
   }
 
   return (
-    <> <div className="header">
+    <> <div className={ active ? 'header active' : 'header'}>
         { active
         ? <div className="d-flex justify-content-between">
             <div className="wallet-info d-flex justify-content-between">
@@ -53,14 +54,14 @@ function Header() {
                 </div>
               </div>
               <div className="side-options d-flex align-items-center justify-content-end">
-                <a href="https://twitter.com/home">
-                  <img src={twitterIcon} alt="" />
-                </a>
-                <Link to="/market" className="button market-icon">
-                  <img src={marketIcon} alt="" />
+                <Link to="/nftstats" className="button market-icon">
+                  <img src={nftStatsIcon} alt="" />
                 </Link>
-                <Link to="/news" className="button news-icon">
-                  <img src={newsIcon} alt="" />
+                <Link to="/coinstats" className="button market-icon">
+                  <img src={coinStatsIcon} alt="" />
+                </Link>
+                <Link to="/market" className="button news-icon">
+                  <img src={marketIcon} alt="" />
                 </Link>
               </div>
             </div>

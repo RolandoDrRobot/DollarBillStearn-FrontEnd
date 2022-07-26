@@ -44,14 +44,14 @@ function PricesTable() {
               <div className='mb-4'>
                 <Loading />
               </div>
-              <p className="info-text">
+              <p className="info-text mb-5">
                 { account ? 'We are loading the markets' : 'Connect your wallet' }
               </p>
             </div>
           </div>
         : <div className="prices-box mb-3" id="pricesBoxAccordion">
             <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pricesBoxAccordionContent" aria-expanded="false" aria-controls="collapsePricesBox">
-              <img src={marketIcon} /> Market
+              <img src={marketIcon} height="30" /> Market
             </button>
 
             <div id="pricesBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="pricesBoxContent" data-bs-parent="#pricesBoxAccordion">

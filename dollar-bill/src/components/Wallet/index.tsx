@@ -63,12 +63,12 @@ function Wallet() {
     <>
       {
         isLoading 
-        ? <div className="h-100 d-flex align-items-center justify-content-center">
+        ? <div className="d-flex align-items-center justify-content-center">
             <div>
               <div className='mb-4'>
                 <Loading />
               </div>
-              <p className="info-text">
+              <p className="info-text mb-5">
                 { account ? 'We are loading your wallets' : 'Connect your wallet' }
               </p>
             </div>
@@ -79,6 +79,8 @@ function Wallet() {
             </button>
 
             <div id="walletAccordionContent" className="accordion-collapse collapse show wallet-content" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
+              
+
               <div className="currency d-flex align-items-center justify-content-center py-2">
                 <div className="box d-flex align-items-center justify-content-center">
                 <img src={
@@ -126,9 +128,11 @@ function Wallet() {
                   )
                 })
               }
-              <p className="info-text">
+              <p className="info-text mb-5">
                 { account ? 'Here are your funds' : 'Connect your wallet' }
               </p>
+
+              
             </div>
           </div>
       }

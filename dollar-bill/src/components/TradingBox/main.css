@@ -17,12 +17,10 @@
 /* --- Trade Box --- 
 /* -------------------- */
 
-.trade-box {
-  background: linear-gradient(140deg, var(--main-bg-color) 0%, var(--main-bg-color-secondary) 100%);
-}
-
 .option {
-  padding: 8px 0;
+  width: 23%;
+  height: 60px;
+  padding: 12px 0;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
@@ -48,16 +46,9 @@
   visibility: hidden;
 }
 
-.option:hover,
-.option--selected,
-.option:hover p,
-.option--selected p {
+body .option:hover,
+body .option.selected {
   background-color: var(--main-bg-color-secondary);
-}
-
-.option {
-  width: 23%;
-  height: 50px;
 }
 
 .input-box {
@@ -72,7 +63,7 @@
 .coin-amount input,
 .coin-amount select,
 .buy-sell-price input {
-  height: 50px;
+  height: 60px;
   font-weight: 500;
 }
 
@@ -93,4 +84,8 @@
 .confirmation-window {
   width: 100%;
   padding: 25px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  fill: #fff !important;
 }

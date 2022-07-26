@@ -129,7 +129,7 @@ function Orders() {
               })
             }
             </div>
-            <p className="info-text">
+            <p className="info-text mb-5">
               { account ? 'Here are your orders' : 'Connect your wallet' }
             </p>
           </div>
