@@ -49,9 +49,6 @@ function PricesTableFavourites() {
                 <div className="box p-1">
                   <strong><p>Binance</p></strong>
                 </div>
-                <div className="box p-1">
-                  <strong><p>FTX</p></strong>
-                </div>
               </div>
               {
                 prices.map(function(item:any, i:any) {
@@ -70,9 +67,6 @@ function PricesTableFavourites() {
                               </div>
                               <div className="box p-1">
                                 <p className="m-0">${item.binance.price.toFixed(2)}</p>
-                              </div>
-                              <div className="box p-1">
-                                <p className="m-0">{item.ftx.price ? `$ ${item.ftx.price.toFixed(2)}` : ''}</p>
                               </div>
                             </div>
                           : <></>

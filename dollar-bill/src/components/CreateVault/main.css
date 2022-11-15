@@ -11,3 +11,7 @@
 .new-vault input::placeholder {
   color: #ffffff7d;
 }
+
+.new-vault .vault-type {
+  width: 48%;
+}

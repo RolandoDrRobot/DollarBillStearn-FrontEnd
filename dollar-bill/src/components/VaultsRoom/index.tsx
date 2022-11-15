@@ -4,7 +4,6 @@ import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
 import Loading from '../../components/Loading/index';
 import binanceIcon from '../../assets/img/coins/binanceIcon.png';
-import ftxIcon from '../../assets/img/coins/ftxIcon.png';
 import './main.css';
 
 function VaultsRoom() {
@@ -41,7 +40,6 @@ function VaultsRoom() {
                           <img 
                             src={
                               item.exchange === 'binance' ? binanceIcon
-                              : item.exchange === 'ftx' ? ftxIcon
                               : ''
                             }
                             className="exchange-logo" 

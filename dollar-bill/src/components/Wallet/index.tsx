@@ -5,7 +5,6 @@ import Loading from '../../components/Loading/index';
 import { useParams } from "react-router-dom";
 import vaultIcon from '../../assets/img/vault.png';
 import binanceIcon from '../../assets/img/coins/binanceIcon.png';
-import ftxIcon from '../../assets/img/coins/ftxIcon.png';
 import './main.css';
 
 interface wallet {
@@ -85,7 +84,6 @@ function Wallet() {
                 <div className="box d-flex align-items-center justify-content-center">
                 <img src={
                     vaults[vaultID].exchange === 'binance' ? binanceIcon
-                    : vaults[vaultID].exchange === 'ftx' ? ftxIcon
                     : ''
                   }
                   className="exchange-logo" 

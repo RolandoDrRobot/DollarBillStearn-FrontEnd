@@ -8,7 +8,7 @@ const useVaults = () => {
 
     React.useEffect(() => {
       const Vaults = async () => {
-        await axios.post('http://localhost:443/getVaults', { account: account }).then((response) => {
+        await axios.post('http://localhost:443/getvaults', { account: account }).then((response) => {
           setVaults(response.data);
         });
       }
