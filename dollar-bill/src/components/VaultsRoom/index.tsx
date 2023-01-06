@@ -35,7 +35,7 @@ function VaultsRoom() {
                 {
                   vaults.map(function(item:any, i:any) {
                     return (
-                      <Link to={`/trading/${i}`} key={i} className="main-button d-flex align-items-center justify-content-between">
+                      <Link to={`/coins/${i}`} key={i} className="main-button d-flex align-items-center justify-content-between">
                         <div className="d-flex align-items-center">
                           <img 
                             src={

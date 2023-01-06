@@ -13,25 +13,26 @@ function Navbar() {
 
   return (
     <>
-      <div className={isLogued ? 'navbar d-flex' : 'navbar d-flex disabled'}>
-        <Link to="/" className="button">
-          <img src={ProfileIcon} alt="" />
-          Home
-        </Link>
-       <Link to="/vaults" className="button">
-          <img src={vaultsIcon} alt="" />
-          Vaults
-        </Link>
-        <Link to="/nfts/0" className="button">
-          <img src={nftIcon} alt="" />
-          NFTs
-        </Link>
-        <Link to="/coins/0" className="button">
-          <img src={coinIcon} alt="" />
-          Coins
-        </Link>
+      <div className="navbar-bottom">
+        <div className="container d-flex">
+          <Link to="/" className="button">
+            <img src={ProfileIcon} alt="" />
+            Home
+          </Link>
+          <Link to="/nfts/0" className="button">
+            <img src={nftIcon} alt="" />
+            NFTs
+          </Link>
+          <Link to="/vaults" className="button">
+            <img src={vaultsIcon} alt="" />
+            Vaults
+          </Link>
+          <Link to="/coins/0" className="button">
+            <img src={coinIcon} alt="" />
+            Operations
+          </Link>
+        </div>
       </div>
-      <p className="info-text font-cinzel">AXE Capital Ⓒ 2022 Dollar Bill Stearn</p>
     </>
   )
 }

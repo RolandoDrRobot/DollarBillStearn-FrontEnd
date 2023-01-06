@@ -33,8 +33,8 @@ function ConnectWallet() {
         ? <Loading /> 
         : <div className="connect-wallet">
             <img className="main-icon" src={mainIcon} alt='' />
-            <h1 className='mb-0 font-cinzel'>Dollar Bill Stearn</h1>
-            <p className='info-text mb-5 font-cinzel'>Ultimate Performance Tracker</p>
+            <h1 className='mb-0'>Dollar Bill Stearn</h1>
+            <p className='info-text mb-5'>Ultimate Performance Tracker</p>
             <button className="main-button d-flex align-items-center justify-content-center m-0" onClick={connect}>
               <img src={metamaskIcon} height="30" alt="" />
               Connect your wallet

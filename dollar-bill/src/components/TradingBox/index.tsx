@@ -176,11 +176,11 @@ function TradingBox() {
     <>
       {
         <div className="trading-box mb-3" id="tradingBoxAccordion">
-          <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
+          <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tradingBoxAccordionContent" aria-expanded="false" aria-controls="collapseTradingBox">
             <img src={coinIcon} height="30" /> Trading Box
           </button>
 
-          <div id="tradingBoxAccordionContent" className="accordion-collapse collapse show" aria-labelledby="tradingBoxContent" data-bs-parent="#tradingBoxAccordion">
+          <div id="tradingBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="tradingBoxContent" data-bs-parent="#tradingBoxAccordion">
             <div className="trade-box mt-3">
               <form id="newOrder">
                 <div className="d-flex justify-content-between mb-3">

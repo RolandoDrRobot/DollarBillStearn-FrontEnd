@@ -1,48 +1,43 @@
 :root {
-  --main-bg-color: #001620;
-  --main-bg-color-secondary: #02283D;
-  --main-blue: #fff;
-  --info-color: #2784af;
-  --white: #fff;
+  --main-bg-color: #172d41;
+  --main-bg-color-secondary: #1f5b72;
+  --main-blue: #46B3C3;
+  --info-color: #97d3da;
+  --white: #d9edf1;
   --positive: #00B83B;
   --alert: #B30024;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxanium:400,500,600,700,800|Poppins:400,400i,500,500i,600,600i,700,700i&display=swap');
 
 * {
   transition: all 0.25s;
 }
 
 body {
-  color: var(--main-blue);
-  background: var(--main-bg-color);
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-}
-
-.font-cinzel {
-  font-family: 'Cinzel', serif;
-  font-weight: 500;
+  color: var(--white);
+  background: rgb(23,45,65);
+  background: linear-gradient(163deg, var(--main-bg-color) 0%, var(--main-bg-color-secondary) 100%);
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 50px 0 80px;
+  background-position: center;
+  background-size: cover;
 }
 
 body strong {
   font-weight: 500 !important;
 }
 
-#root {
-  width: 100%;
-  max-width: 340px;
-}
-
 #content {
   width: 100%;
-  height: 66vh;
-  margin: 18px 0;
+  max-width: 425px;
+  margin: auto;
+  padding: 83px 15px 20px;
 }
 
 .view-container {
@@ -77,8 +72,8 @@ select {
   text-align: center;
   border: 0;
   border-radius: 5px;
-  color: var(--main-blue);
-  background-color: var(--main-bg-color-secondary);
+  color: var(--white);
+  background-color: var(--main-bg-color);
 }
 
 .input::placeholder {
@@ -104,17 +99,19 @@ button {
 .main-button {
   width: 100%;
   height: 60px;
-  color: var(--main-blue);
+  font-weight: bold;
+  color: var(--white);
   border-radius: 5px;
   transition: all 0.3s;
-  background-color: var(--main-bg-color-secondary);
+  background-color: var(--main-bg-color);
+  border-bottom: 5px solid var(--main-bg-color-secondary);
   cursor: pointer;
 }
 
 body .main-button:hover,
 body .selected {
   color: var(--white);
-  background-color: var(--info-color);
+  background-color: var(--main-bg-color-secondary);
 }
 
 .main-button img {
@@ -124,19 +121,19 @@ body .selected {
 .info-text {
   text-align: center;
   font-size: 12px;
-  font-weight: normal;
-  margin: 10px;
+  font-weight: 500;
+  margin: 14px;
   color: var(--info-color);
 }
 
 .accordion-button:not(.collapsed) {
-  color: var(--main-blue) !important;
+  color: var(--info-color) !important;
   background-color: var(--main-bg-color-secondary) !important;
   box-shadow: unset !important;
 }
 
 .accordion-button:focus {
-  z-index: 3;
+  z-index: 0;
   border-color: unset !important;
   outline: 0;
   box-shadow: unset !important;
@@ -147,7 +144,7 @@ body .selected {
   width: 100% !important;
   color: var(--main-bg-color-secondary) !important;
   background-color: var(--main-blue) !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
   text-transform: initial !important;
   font-weight: 500 !important;
   margin-right: auto !important;

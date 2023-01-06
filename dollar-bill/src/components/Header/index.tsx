@@ -1,11 +1,7 @@
 import React from 'react';
-import metamaskIcon from '../../assets/img/metamask.png';
-import marketIcon from '../../assets/img/marketIcon.png';
-import nftStatsIcon from '../../assets/img/nftStatsIcon.png';
-import coinStatsIcon from '../../assets/img/coinStatsIcon.png';
-import twitterIcon from '../../assets/img/twitter.png';
-import logoutWalletIcon from '../../assets/img/off.png';
 import Loading from '../../components/Loading/index';
+import logo from '../../assets/img/profile.png';
+import loadingIcon from '../../assets/img/settings.png';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
@@ -46,25 +42,27 @@ function Header() {
   return (
     <> <div className={ active ? 'header active' : 'header'}>
         { active
-        ? <div className="d-flex justify-content-between">
-            <div className="wallet-info d-flex justify-content-between">
-                <div className="wallet-logout d-flex align-items-center" onClick={disconnect}>
-                  <span className="status connected"></span>
-                  <img src={logoutWalletIcon} alt="" />
-                </div>
+        ? <nav className="navbar">
+            <div className='container'>
+              <div className="logo d-flex align-items-center mb-2">
+                <a href="https://developermonster.com/"><img src={logo} height="70" alt="Logo" /></a>
+                <h2>Dollar Bill <span>Capital</span></h2>
               </div>
-              <div className="side-options d-flex align-items-center justify-content-end">
-                <Link to="/nftstats" className="button market-icon">
-                  <img src={nftStatsIcon} alt="" />
-                </Link>
-                <Link to="/coinstats" className="button market-icon">
-                  <img src={coinStatsIcon} alt="" />
-                </Link>
-                <Link to="/market" className="button news-icon">
-                  <img src={marketIcon} alt="" />
-                </Link>
+              <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src={loadingIcon} width="35" height="35" alt="" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link to="/market" className="button">
+                     Market
+                    </Link>
+                  </li>
+                  <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
+                </ul>
               </div>
             </div>
+          </nav>
         : isLoading === true 
         ? <Loading /> 
         : <></>        

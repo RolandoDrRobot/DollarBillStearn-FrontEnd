@@ -1,52 +1,91 @@
-.header {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 55px;
-  padding: 13px 15px 10px;
+  z-index: 2;
+  padding: 15px 15px 0;
   background-color: var(--main-bg-color);
-  border-radius: 10px;
-  margin: auto;
-  transition: all 0.3s;
+  border-bottom: 2px solid var(--main-bg-color-secondary);
 }
 
-.header.active {
+.navbar .container {
+  max-width: 425px;
+}
+
+.navbar .logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid var(--main-blue);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar .logo h2 {
+  font-family: 'Oxanium', cursive;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.navbar .logo h2 span {
+  font-size: 24px;
+  color: var(--main-blue);
+}
+
+.navbar-nav li a {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 18px 5%;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-item img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.connect-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 83px;
+  color: var(--white);
+  transition: all 0.25s;
+  cursor: pointer;
+  border-bottom: 3px solid var(--main-bg-color-secondary);
+}
+
+.connect-btn:hover {
   background-color: var(--main-bg-color-secondary);
 }
 
-.header .wallet-info {
-  font-size: 12px;
-  border-radius: 5px;
-}
-
-.header .wallet-info p {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 0 0 8px;
-}
-
-.header .wallet-info div {
-  border-radius: 5px;
-}
-
-.header .wallet-info .wallet-logout {
-  width: 20%;
-  border-radius: 15px 0 0 15px;
-  margin-left: -2px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.header .wallet-info img {
+.connect-btn img {
   width: 30px;
-  border-radius: 5px;
+  margin-right: 12px;
 }
 
-.header .side-options img {
-  width: 30px;
-  height: 30px;
-  position: relative;
+.navbar-toggler img {
+  margin-top: -20px;
+  transition: all 300ms linear;
 }
 
-.header .news-icon,
-.header .market-icon {
-  margin-left: 18px;
+.navbar-toggler.collapsed img {
+  transform: rotate(70deg);
+}
+
+/* Bootstrap Overrides */
+.navbar-toggler:focus {
+  box-shadow: unset;
 }

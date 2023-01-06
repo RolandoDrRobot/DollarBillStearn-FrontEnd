@@ -56,7 +56,7 @@ function PricesTable() {
 
             <div id="pricesBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="pricesBoxContent" data-bs-parent="#pricesBoxAccordion">
             <div className="prices-table mb-3">
-              <div className="prices d-flex align-items-center justify-content-center">
+              <div className="prices d-flex align-items-center justify-content-start">
                 <div className="box p-1">
                 <strong><p className='text-center'>Ticker</p></strong>
                 </div>
@@ -70,7 +70,7 @@ function PricesTable() {
               {
                 prices.map(function(item:any, i:any) {
                   return (
-                    <div key={i} className="prices d-flex align-items-center justify-content-center">
+                    <div key={i} className="prices d-flex align-items-center justify-content-start">
                       <div className="box d-flex align-items-center justify-content-around">
                         {
                           favs.favouriteTickers
