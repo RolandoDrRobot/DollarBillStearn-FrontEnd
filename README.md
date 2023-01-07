@@ -12,11 +12,14 @@
 
 ### 💸 What is this
 - This is an assets performance tracker, this is meant to be for private use
-- 
 
 
 ### ⚡️ Features
-- 
+- Watch the markets: Prices for all possible tickers
+- Favourite tickers: Fav tickers for each wallet
+- Trade your exchange accounts from here: The app supports Binance for now
+- You can have more than one account per wallet connected
+- You can open limit orders and watch those and past orders
 
 
 ### ⚙️ How to install
@@ -25,16 +28,19 @@
 - Run `npm run start`
 - Open `http://localhost:3000/`
 
-
 ### ⚙️ How to use
-- 
+- The app shows a cover screen when wallet is not connected
+- The app supports Ethereum wallets (Rinkeby and testnets) and Polygon (and Mumbai)
 
 
 ### 📘 Improvements Ideas
-- 
+- (Screen home) Create BTC bags NFT for Identified investors
+- (Screen NFTs) Incorporate NFTs vaults (accounts) to track collectibles performance
+
 
 ### 🐛 Tech debt
-- 
+- Refactor the APP
+- Need to triple check what is done
 
 ### ⚡️ Screenshots
 <img src="Screenshots/a.png" alt="Home" width="500"/>
