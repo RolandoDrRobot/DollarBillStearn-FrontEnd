@@ -1,7 +1,7 @@
-# ⚡️ DollarBillStearn-FrontEnd
+# 💸 DollarBillStearn-FrontEnd
 
 
-## 🔮 Table of contents
+## 📘 Table of contents
 1. [What is this](#-what-is-this)
 2. [Features](#%EF%B8%8F-features)
 3. [How to install](#%EF%B8%8F-how-to-install)
@@ -10,7 +10,7 @@
 6. [Screenshots](#%EF%B8%8F-screenshots)
 
 
-### 🪙 What is this
+### 💸 What is this
 - This is an assets performance tracker, this is meant to be for private use
 - 
 
@@ -30,10 +30,10 @@
 - 
 
 
-### 🔮 Improvements Ideas
+### 📘 Improvements Ideas
 - 
 
-### 🐝 Tech debt
+### 🐛 Tech debt
 - 
 
 ### ⚡️ Screenshots
