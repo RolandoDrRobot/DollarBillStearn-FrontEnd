@@ -1,6 +1,6 @@
 import React from "react";
 import { globalContext } from '../../hooks/appContext';
-import vaultsIcon from '../../assets/img/vault.png';
+import vaultsIcon from '../../assets/img/Vault.png';
 import usdtIcon from '../../assets/img/coins/usdtIcon.png';
 import botIcon from '../../assets/img/bot.png';
 

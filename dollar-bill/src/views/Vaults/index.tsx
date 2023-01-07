@@ -16,6 +16,10 @@ function Vaults() {
         {
           isLogued 
             ? <>
+                <div className="section-title title-style-two text-center mb-3">
+                  <span>Vaults</span>
+                  <h2>Manage <span>Accounts</span></h2>
+                </div>
                 <VaultsRoomStatus />
                 <VaultsRoom />
                 <CreateVaultButton />

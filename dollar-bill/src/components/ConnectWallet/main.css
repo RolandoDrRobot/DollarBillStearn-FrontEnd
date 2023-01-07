@@ -9,14 +9,11 @@
 }
 
 .connect-wallet .main-icon {
-  width: 80%;
-  border-radius: 10px;
-  margin-bottom: 46px;
-}
-
-.connect-wallet .main-button {
-  position: absolute;
-  bottom: 0;
+  width: 70%;
+  object-fit: cover;
+  border: 6px solid var(--main-blue);
+  border-radius: 50%;
+  margin-bottom: 18px;
 }
 
 .connect-wallet h1 {

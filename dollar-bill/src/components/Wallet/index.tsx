@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
 import Loading from '../../components/Loading/index';
 import { useParams } from "react-router-dom";
-import vaultIcon from '../../assets/img/vault.png';
+import vaultIcon from '../../assets/img/Vault.png';
 import binanceIcon from '../../assets/img/coins/binanceIcon.png';
 import './main.css';
 
@@ -67,19 +67,17 @@ function Wallet() {
               <div className='mb-4'>
                 <Loading />
               </div>
-              <p className="info-text mb-5">
-                { account ? 'We are loading your wallets' : 'Connect your wallet' }
+              <p className="info-text mb-3">
+                { account ? 'We are loading your wallet' : 'Connect your wallet' }
               </p>
             </div>
           </div>
         : <div className="wallet mb-3" id="walletAccordion">
-            <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#walletAccordionContent" aria-expanded="true" aria-controls="collapseWallet">
+            <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#walletAccordionContent" aria-expanded="true" aria-controls="collapseWallet">
               <img src={vaultIcon} height="30" />{vaults[vaultID].name} - {vaults[vaultID].exchange}
             </button>
 
-
-
-            <div id="walletAccordionContent" className="accordion-collapse collapse wallet-content" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
+            <div id="walletAccordionContent" className="accordion-collapse collapse wallet-content show" aria-labelledby="walletContent" data-bs-parent="#walletAccordion">
               <div className="currency d-flex align-items-center justify-content-center py-2">
                 <div className="box d-flex align-items-center justify-content-center">
                 <img src={
@@ -126,8 +124,8 @@ function Wallet() {
                   )
                 })
               }
-              <p className="info-text mb-5">
-                { account ? 'Here are your funds' : 'Connect your wallet' }
+              <p className="info-text mb-3">
+                { account ? '' : 'Connect your wallet' }
               </p>
             </div>
           </div>

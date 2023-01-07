@@ -199,10 +199,6 @@ function TradingBox() {
                 </div>
                 <div className="coin-amount d-flex justify-content-between align-items-center mb-3">
                   <div className="input-box">
-                    <input type="number" placeholder="Price to buy or sell" onChange={updateOrderPrice} value={orderPrice || 0} disabled={opertaionType === 'market'} required />
-                    <p className="info-text">Coin Price</p>
-                  </div>
-                  <div className="input-box">
                     <select name="coin" onChange={updateCoinSelected} required>
                       <option disabled>Favourite Tickers</option>
                       {
@@ -225,8 +221,10 @@ function TradingBox() {
                     </select>
                     <p className="info-text">Ticker</p>
                   </div>
-                  
-                  
+                  <div className="input-box">
+                    <input type="number" placeholder="Price to buy or sell" onChange={updateOrderPrice} value={orderPrice || 0} disabled={opertaionType === 'market'} required />
+                    <p className="info-text">Coin Price</p>
+                  </div>
                 </div>
                 <div className="buy-sell-price d-flex justify-content-between align-items-center mb-3">
                   <div className="input-box">

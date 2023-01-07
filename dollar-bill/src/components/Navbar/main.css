@@ -32,7 +32,7 @@
 
 .navbar-bottom img {
   display: block;
-  width: 35px;
+  width: 50px;
   margin: 0 auto 5px;
   border-radius: 10%;
   transition: all 0.25s;
@@ -42,5 +42,4 @@
 .navbar-bottom img:focus,
 .navbar-bottom img:hover {
   color: var(--white);
-  border: 2px solid var(--white);
 }

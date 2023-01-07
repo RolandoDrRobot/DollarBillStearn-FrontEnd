@@ -17,7 +17,7 @@
 }
 
 .currency {
-  background: linear-gradient(140deg, var(--main-bg-color) 0%, var(--main-bg-color-secondary) 100%);
+  background: transparent;
 }
 
 .currency .box {

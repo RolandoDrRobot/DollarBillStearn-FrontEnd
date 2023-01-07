@@ -15,6 +15,10 @@ function Market() {
       {
         isLogued 
           ? <>
+              <div className="section-title title-style-two text-center mb-3">
+                <span>Market</span>
+                <h2>Watch <span>the markets</span></h2>
+              </div>
               <PricesTableFavourites />
               <PricesTable />
             </>

@@ -33,11 +33,11 @@ function PricesTableFavourites() {
         isLoading && prices
         ? <></>
         : <div className="fav-box mb-3" id="favBoxAccordion">
-            <button className="accordion-button main-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#favBoxAccordionContent" aria-expanded="true" aria-controls="collapseFavBox">
+            <button className="accordion-button main-button" type="button" data-bs-toggle="collapse" data-bs-target="#favBoxAccordionContent" aria-expanded="true" aria-controls="collapseFavBox">
               <img src={favIcon} height="30" /> Favourite Tickers
             </button>
 
-            <div id="favBoxAccordionContent" className="accordion-collapse collapse" aria-labelledby="favBoxContent" data-bs-parent="#favBoxAccordion">
+            <div id="favBoxAccordionContent" className="accordion-collapse collapse show" aria-labelledby="favBoxContent" data-bs-parent="#favBoxAccordion">
             <div className="prices-table mb-3">
               <div className="prices d-flex align-items-center justify-content-start">
                 <div className="box p-1">

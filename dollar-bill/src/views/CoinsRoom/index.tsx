@@ -16,8 +16,12 @@ function CoinsRoom() {
         {
           isLogued 
           ? <>
-              <TradingBox />
+              <div className="section-title title-style-two text-center mb-3">
+                <span>Coins</span>
+                <h2>Trading <span>Room</span></h2>
+              </div>
               <Wallet />
+              <TradingBox />
               <Orders />
             </>
           : <ConnectWallet />

@@ -3,8 +3,7 @@ import Loading from '../Loading/index';
 import { useWeb3React } from '@web3-react/core';
 import { globalContext } from '../../hooks/appContext';
 import { injected } from '../../config/connector';
-import { useAlert } from 'react-alert';
-import mainIcon from '../../assets/img/mainIcon.png';
+import mainIcon from '../../assets/img/profile.png';
 import metamaskIcon from '../../assets/img/metamask.png';
 
 import './main.css';
@@ -33,9 +32,11 @@ function ConnectWallet() {
         ? <Loading /> 
         : <div className="connect-wallet">
             <img className="main-icon" src={mainIcon} alt='' />
-            <h1 className='mb-0'>Dollar Bill Stearn</h1>
-            <p className='info-text mb-5'>Ultimate Performance Tracker</p>
-            <button className="main-button d-flex align-items-center justify-content-center m-0" onClick={connect}>
+            <div className="section-title title-style-two text-center mb-3">
+              <span>Ultimate performance tracker</span>
+              <h2>Dollar Bill <span>Capital</span></h2>
+            </div>
+            <button className="main-button d-flex align-items-center justify-content-center m-0 mt-3" onClick={connect}>
               <img src={metamaskIcon} height="30" alt="" />
               Connect your wallet
             </button>

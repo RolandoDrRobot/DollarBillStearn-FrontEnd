@@ -4,8 +4,8 @@
   --main-blue: #46B3C3;
   --info-color: #97d3da;
   --white: #d9edf1;
-  --positive: #00B83B;
-  --alert: #B30024;
+  --positive: #46B3C3;
+  --alert: #ff0000;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Oxanium:400,500,600,700,800|Poppins:400,400i,500,500i,600,600i,700,700i&display=swap');
@@ -37,7 +37,7 @@ body strong {
   width: 100%;
   max-width: 425px;
   margin: auto;
-  padding: 83px 15px 20px;
+  padding: 50px 15px 110px;
 }
 
 .view-container {
@@ -126,8 +126,12 @@ body .selected {
   color: var(--info-color);
 }
 
+.accordion-button:hover {
+  z-index: 0 !important;
+}
+
 .accordion-button:not(.collapsed) {
-  color: var(--info-color) !important;
+  color: var(--white) !important;
   background-color: var(--main-bg-color-secondary) !important;
   box-shadow: unset !important;
 }
@@ -137,6 +141,57 @@ body .selected {
   border-color: unset !important;
   outline: 0;
   box-shadow: unset !important;
+}
+
+/* Title  */
+.section-title {
+  font-family: 'Oxanium', sans-serif;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.section-title h2 span {
+  font-size: 36px;
+  color: var(--main-blue);
+}
+
+.section-title > span {
+  display: block;
+  font-family: 'Poppins', sans-serif !important;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--info-color);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.title-style-two {
+  padding-bottom: 35px;
+  position: relative;
+  margin: 30px auto 40px;
+}
+
+.title-style-two::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url('./assets/img/title_bar.png');
+  width: 270px;
+  height: 13px;
+  background-repeat: no-repeat;
+}
+
+.title-style-two.text-center::before {
+  right: 0;
+  margin: 0 auto;
 }
 
 /* Error Plugin Styles */
